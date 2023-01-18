@@ -1,0 +1,1461 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["tcs"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/temp-control\/TempControlAadl.sysml"
+            },
+            "beginLine" : 11,
+            "beginColumn" : 2,
+            "endLine" : 14,
+            "endColumn" : 3,
+            "offset" : 226,
+            "length" : 103
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::TempControlSystem"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["tcs", "tcp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temp-control\/TempControlAadl.sysml"
+                },
+                "beginLine" : 16,
+                "beginColumn" : 2,
+                "endLine" : 30,
+                "endColumn" : 3,
+                "offset" : 333,
+                "length" : 759
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TempControlAadl::TempControlProcess"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "tempSensor"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 33,
+                    "beginColumn" : 2,
+                    "endLine" : 44,
+                    "endColumn" : 3,
+                    "offset" : 1118,
+                    "length" : 206
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::TempSensor"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::Temperature"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "tempChanged"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 3,
+                        "endLine" : 11,
+                        "endColumn" : 62,
+                        "offset" : 323,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 3,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 449,
+                        "length" : 41
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "tempControl"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 2,
+                    "endLine" : 61,
+                    "endColumn" : 3,
+                    "offset" : 1350,
+                    "length" : 313
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::TempControl"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "currentTemp"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::Temperature"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "tempChanged"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "fanCmd"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::FanCmd"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "fanAck"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::FanAck"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "setPoint"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::Temperature"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 3,
+                        "endLine" : 11,
+                        "endColumn" : 62,
+                        "offset" : 323,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 3,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 449,
+                        "length" : 41
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "fan"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 64,
+                    "beginColumn" : 2,
+                    "endLine" : 75,
+                    "endColumn" : 3,
+                    "offset" : 1681,
+                    "length" : 201
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::Fan"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "fanCmd"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::FanCmd"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "fanAck"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::FanAck"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 3,
+                        "endLine" : 11,
+                        "endColumn" : 62,
+                        "offset" : 323,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 3,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 449,
+                        "length" : 41
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "opInterface"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 78,
+                    "beginColumn" : 2,
+                    "endLine" : 89,
+                    "endColumn" : 3,
+                    "offset" : 1914,
+                    "length" : 226
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::OperatorInterface"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "currentTemp"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::Temperature"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "setPoint"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TempControlAadl::Temperature"
+                    }
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 11,
+                        "beginColumn" : 3,
+                        "endLine" : 11,
+                        "endColumn" : 62,
+                        "offset" : 323,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/aadl.contributions\/AADLProperties.sysml"
+                        },
+                        "beginLine" : 16,
+                        "beginColumn" : 3,
+                        "endLine" : 16,
+                        "endColumn" : 44,
+                        "offset" : 449,
+                        "length" : 41
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "ctTStoTC"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempControl", "currentTemp"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "ctTStoOI"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "opInterface", "currentTemp"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "tcTStoTC"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempSensor", "tempChanged"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempControl", "tempChanged"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "fcTCtoF"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempControl", "fanCmd"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "fan", "fanCmd"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "faFtoTC"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "fan", "fanAck"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempControl", "fanAck"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["tcs", "tcp", "spOItoTC"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "opInterface", "setPoint"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["tcs", "tcp", "tempControl", "setPoint"],
+                      "pos" : {
+                        "type" : "None"
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Feature"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+            }
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::Temperature"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::FanCmd"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::FanAck"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    }
+  ]
+}
