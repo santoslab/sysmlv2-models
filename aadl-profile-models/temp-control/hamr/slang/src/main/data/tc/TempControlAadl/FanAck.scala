@@ -5,22 +5,17 @@ package tc.TempControlAadl
 import org.sireum._
 import tc._
 
-// This file will not be overwritten so is safe to edit
+// This file was auto-generated.  Do not edit
 
-// This is a type skeleton as HAMR doesn't know how to translate TempControlAadl::FanAck
-
-object FanAck {
-  def example(): TempControlAadl.FanAck = {
-    return TempControlAadl.FanAck()
-  }
+@enum object FanAck {
+  "Ok"
+  "Error"
 }
-
-@datatype class FanAck()
 
 object FanAck_Payload {
   def example(): FanAck_Payload = {
-    return FanAck_Payload(TempControlAadl.FanAck.example())
+    return FanAck_Payload(TempControlAadl.FanAck.byOrdinal(0).get)
   }
 }
 
-@datatype class FanAck_Payload(value: TempControlAadl.FanAck) extends art.DataContent
+@datatype class FanAck_Payload(value: TempControlAadl.FanAck.Type) extends art.DataContent

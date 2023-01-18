@@ -15,28 +15,28 @@ import tc.TempControlAadl.{OperatorInterface_tcp_opInterface => component}
   val dispatchProtocol: DispatchPropertyProtocol,
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
-  currentTemp: Port[TempControlAadl.Temperature],
-  setPoint: Port[TempControlAadl.Temperature]
+  ports_currentTemp: Port[TempControlAadl.Temperature],
+  ports_setPoint: Port[TempControlAadl.Temperature]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(currentTemp,
-              setPoint),
+    all = ISZ(ports_currentTemp,
+              ports_setPoint),
 
-    dataIns = ISZ(currentTemp),
+    dataIns = ISZ(ports_currentTemp),
 
     dataOuts = ISZ(),
 
     eventIns = ISZ(),
 
-    eventOuts = ISZ(setPoint)
+    eventOuts = ISZ(ports_setPoint)
   )
 
   val initialization_api : OperatorInterface_Initialization_Api = {
     val api = OperatorInterface_Initialization_Api(
       id,
-      currentTemp.id,
-      setPoint.id
+      ports_currentTemp.id,
+      ports_setPoint.id
     )
     OperatorInterface_tcp_opInterface_Bridge.c_initialization_api = Some(api)
     api
@@ -45,8 +45,8 @@ import tc.TempControlAadl.{OperatorInterface_tcp_opInterface => component}
   val operational_api : OperatorInterface_Operational_Api = {
     val api = OperatorInterface_Operational_Api(
       id,
-      currentTemp.id,
-      setPoint.id
+      ports_currentTemp.id,
+      ports_setPoint.id
     )
     OperatorInterface_tcp_opInterface_Bridge.c_operational_api = Some(api)
     api
@@ -56,8 +56,8 @@ import tc.TempControlAadl.{OperatorInterface_tcp_opInterface => component}
     OperatorInterface_tcp_opInterface_Bridge.EntryPoints(
       id,
 
-      currentTemp.id,
-      setPoint.id,
+      ports_currentTemp.id,
+      ports_setPoint.id,
 
       dispatchTriggers,
 
@@ -72,19 +72,19 @@ object OperatorInterface_tcp_opInterface_Bridge {
 
   @datatype class EntryPoints(
     OperatorInterface_tcp_opInterface_BridgeId : Art.BridgeId,
-    currentTemp_Id : Art.PortId,
-    setPoint_Id : Art.PortId,
+    ports_currentTemp_Id : Art.PortId,
+    ports_setPoint_Id : Art.PortId,
     dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: OperatorInterface_Initialization_Api,
     operational_api: OperatorInterface_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(currentTemp_Id)
+    val dataInPortIds: ISZ[Art.PortId] = ISZ(ports_currentTemp_Id)
 
     val eventInPortIds: ISZ[Art.PortId] = ISZ()
 
     val dataOutPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(setPoint_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_setPoint_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: OperatorInterface_Initialization_Api): Unit = {}

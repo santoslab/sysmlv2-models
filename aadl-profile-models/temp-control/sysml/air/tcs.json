@@ -111,7 +111,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                    "name" : ["tcs", "tcp", "tempSensor", "ports_currentTemp"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -139,7 +139,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempSensor", "tempChanged"],
+                    "name" : ["tcs", "tcp", "tempSensor", "ports_tempChanged"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -280,7 +280,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempControl", "currentTemp"],
+                    "name" : ["tcs", "tcp", "tempControl", "ports_currentTemp"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -308,7 +308,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempControl", "tempChanged"],
+                    "name" : ["tcs", "tcp", "tempControl", "ports_tempChanged"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -332,7 +332,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempControl", "fanCmd"],
+                    "name" : ["tcs", "tcp", "tempControl", "ports_fanCmd"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -360,7 +360,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempControl", "fanAck"],
+                    "name" : ["tcs", "tcp", "tempControl", "ports_fanAck"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -388,7 +388,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "tempControl", "setPoint"],
+                    "name" : ["tcs", "tcp", "tempControl", "ports_setPoint"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -533,7 +533,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "fan", "fanCmd"],
+                    "name" : ["tcs", "tcp", "fan", "ports_fanCmd"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -561,7 +561,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "fan", "fanAck"],
+                    "name" : ["tcs", "tcp", "fan", "ports_fanAck"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -706,7 +706,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "opInterface", "currentTemp"],
+                    "name" : ["tcs", "tcp", "opInterface", "ports_currentTemp"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -734,7 +734,7 @@
                   "type" : "FeatureEnd",
                   "identifier" : {
                     "type" : "Name",
-                    "name" : ["tcs", "tcp", "opInterface", "setPoint"],
+                    "name" : ["tcs", "tcp", "opInterface", "ports_setPoint"],
                     "pos" : {
                       "type" : "None"
                     }
@@ -849,7 +849,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "ctTStoTC"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 24,
+                    "beginColumn" : 3,
+                    "endLine" : 24,
+                    "endColumn" : 93,
+                    "offset" : 575,
+                    "length" : 90
+                  }
                 }
               },
               "src" : [
@@ -859,16 +872,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempSensor"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 18,
+                        "beginColumn" : 3,
+                        "endLine" : 18,
+                        "endColumn" : 41,
+                        "offset" : 395,
+                        "length" : 38
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                      "name" : ["tcs", "tcp", "tempSensor", "ports_currentTemp"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 36,
+                          "beginColumn" : 4,
+                          "endLine" : 36,
+                          "endColumn" : 39,
+                          "offset" : 1181,
+                          "length" : 35
+                        }
                       }
                     }
                   },
@@ -888,16 +927,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempControl"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 19,
+                        "beginColumn" : 3,
+                        "endLine" : 19,
+                        "endColumn" : 43,
+                        "offset" : 436,
+                        "length" : 40
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempControl", "currentTemp"],
+                      "name" : ["tcs", "tcp", "tempControl", "ports_currentTemp"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 50,
+                          "beginColumn" : 4,
+                          "endLine" : 50,
+                          "endColumn" : 38,
+                          "offset" : 1415,
+                          "length" : 34
+                        }
                       }
                     }
                   },
@@ -912,7 +977,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -927,7 +992,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "ctTStoOI"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 25,
+                    "beginColumn" : 3,
+                    "endLine" : 25,
+                    "endColumn" : 93,
+                    "offset" : 668,
+                    "length" : 90
+                  }
                 }
               },
               "src" : [
@@ -937,16 +1015,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempSensor"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 18,
+                        "beginColumn" : 3,
+                        "endLine" : 18,
+                        "endColumn" : 41,
+                        "offset" : 395,
+                        "length" : 38
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempSensor", "currentTemp"],
+                      "name" : ["tcs", "tcp", "tempSensor", "ports_currentTemp"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 36,
+                          "beginColumn" : 4,
+                          "endLine" : 36,
+                          "endColumn" : 39,
+                          "offset" : 1181,
+                          "length" : 35
+                        }
                       }
                     }
                   },
@@ -966,16 +1070,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "opInterface"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 21,
+                        "beginColumn" : 3,
+                        "endLine" : 21,
+                        "endColumn" : 49,
+                        "offset" : 506,
+                        "length" : 46
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "opInterface", "currentTemp"],
+                      "name" : ["tcs", "tcp", "opInterface", "ports_currentTemp"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 81,
+                          "beginColumn" : 4,
+                          "endLine" : 81,
+                          "endColumn" : 38,
+                          "offset" : 1985,
+                          "length" : 34
+                        }
                       }
                     }
                   },
@@ -990,7 +1120,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -1005,7 +1135,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "tcTStoTC"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 26,
+                    "beginColumn" : 3,
+                    "endLine" : 26,
+                    "endColumn" : 93,
+                    "offset" : 761,
+                    "length" : 90
+                  }
                 }
               },
               "src" : [
@@ -1015,16 +1158,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempSensor"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 18,
+                        "beginColumn" : 3,
+                        "endLine" : 18,
+                        "endColumn" : 41,
+                        "offset" : 395,
+                        "length" : 38
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempSensor", "tempChanged"],
+                      "name" : ["tcs", "tcp", "tempSensor", "ports_tempChanged"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 37,
+                          "beginColumn" : 4,
+                          "endLine" : 37,
+                          "endColumn" : 27,
+                          "offset" : 1220,
+                          "length" : 23
+                        }
                       }
                     }
                   },
@@ -1044,16 +1213,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempControl"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 19,
+                        "beginColumn" : 3,
+                        "endLine" : 19,
+                        "endColumn" : 43,
+                        "offset" : 436,
+                        "length" : 40
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempControl", "tempChanged"],
+                      "name" : ["tcs", "tcp", "tempControl", "ports_tempChanged"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 51,
+                          "beginColumn" : 4,
+                          "endLine" : 51,
+                          "endColumn" : 26,
+                          "offset" : 1453,
+                          "length" : 22
+                        }
                       }
                     }
                   },
@@ -1068,7 +1263,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -1083,7 +1278,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "fcTCtoF"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 27,
+                    "beginColumn" : 3,
+                    "endLine" : 27,
+                    "endColumn" : 75,
+                    "offset" : 854,
+                    "length" : 72
+                  }
                 }
               },
               "src" : [
@@ -1093,16 +1301,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempControl"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 19,
+                        "beginColumn" : 3,
+                        "endLine" : 19,
+                        "endColumn" : 43,
+                        "offset" : 436,
+                        "length" : 40
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempControl", "fanCmd"],
+                      "name" : ["tcs", "tcp", "tempControl", "ports_fanCmd"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 52,
+                          "beginColumn" : 4,
+                          "endLine" : 52,
+                          "endColumn" : 34,
+                          "offset" : 1479,
+                          "length" : 30
+                        }
                       }
                     }
                   },
@@ -1122,16 +1356,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "fan"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 20,
+                        "beginColumn" : 3,
+                        "endLine" : 20,
+                        "endColumn" : 27,
+                        "offset" : 479,
+                        "length" : 24
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "fan", "fanCmd"],
+                      "name" : ["tcs", "tcp", "fan", "ports_fanCmd"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 67,
+                          "beginColumn" : 4,
+                          "endLine" : 67,
+                          "endColumn" : 33,
+                          "offset" : 1738,
+                          "length" : 29
+                        }
                       }
                     }
                   },
@@ -1146,7 +1406,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -1161,7 +1421,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "faFtoTC"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 28,
+                    "beginColumn" : 3,
+                    "endLine" : 28,
+                    "endColumn" : 75,
+                    "offset" : 929,
+                    "length" : 72
+                  }
                 }
               },
               "src" : [
@@ -1171,16 +1444,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "fan"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 20,
+                        "beginColumn" : 3,
+                        "endLine" : 20,
+                        "endColumn" : 27,
+                        "offset" : 479,
+                        "length" : 24
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "fan", "fanAck"],
+                      "name" : ["tcs", "tcp", "fan", "ports_fanAck"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 68,
+                          "beginColumn" : 4,
+                          "endLine" : 68,
+                          "endColumn" : 34,
+                          "offset" : 1771,
+                          "length" : 30
+                        }
                       }
                     }
                   },
@@ -1200,16 +1499,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempControl"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 19,
+                        "beginColumn" : 3,
+                        "endLine" : 19,
+                        "endColumn" : 43,
+                        "offset" : 436,
+                        "length" : 40
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempControl", "fanAck"],
+                      "name" : ["tcs", "tcp", "tempControl", "ports_fanAck"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 53,
+                          "beginColumn" : 4,
+                          "endLine" : 53,
+                          "endColumn" : 33,
+                          "offset" : 1513,
+                          "length" : 29
+                        }
                       }
                     }
                   },
@@ -1224,7 +1549,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -1239,7 +1564,20 @@
                 "type" : "Name",
                 "name" : ["tcs", "tcp", "spOItoTC"],
                 "pos" : {
-                  "type" : "None"
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temp-control\/TempControlAadl.sysml"
+                    },
+                    "beginLine" : 29,
+                    "beginColumn" : 3,
+                    "endLine" : 29,
+                    "endColumn" : 88,
+                    "offset" : 1004,
+                    "length" : 85
+                  }
                 }
               },
               "src" : [
@@ -1249,16 +1587,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "opInterface"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 21,
+                        "beginColumn" : 3,
+                        "endLine" : 21,
+                        "endColumn" : 49,
+                        "offset" : 506,
+                        "length" : 46
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "opInterface", "setPoint"],
+                      "name" : ["tcs", "tcp", "opInterface", "ports_setPoint"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 82,
+                          "beginColumn" : 4,
+                          "endLine" : 82,
+                          "endColumn" : 41,
+                          "offset" : 2023,
+                          "length" : 37
+                        }
                       }
                     }
                   },
@@ -1278,16 +1642,42 @@
                     "type" : "Name",
                     "name" : ["tcs", "tcp", "tempControl"],
                     "pos" : {
-                      "type" : "None"
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 19,
+                        "beginColumn" : 3,
+                        "endLine" : 19,
+                        "endColumn" : 43,
+                        "offset" : 436,
+                        "length" : 40
+                      }
                     }
                   },
                   "feature" : {
                     "type" : "Some",
                     "value" : {
                       "type" : "Name",
-                      "name" : ["tcs", "tcp", "tempControl", "setPoint"],
+                      "name" : ["tcs", "tcp", "tempControl", "ports_setPoint"],
                       "pos" : {
-                        "type" : "None"
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temp-control\/TempControlAadl.sysml"
+                          },
+                          "beginLine" : 54,
+                          "beginColumn" : 4,
+                          "endLine" : 54,
+                          "endColumn" : 40,
+                          "offset" : 1546,
+                          "length" : 36
+                        }
                       }
                     }
                   },
@@ -1302,7 +1692,7 @@
               ],
               "kind" : {
                 "type" : "ConnectionKind",
-                "value" : "Feature"
+                "value" : "Port"
               },
               "isBiDirectional" : false,
               "connectionInstances" : [
@@ -1313,6 +1703,750 @@
             }
           ],
           "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempSensor"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 18,
+                      "beginColumn" : 3,
+                      "endLine" : 18,
+                      "endColumn" : 41,
+                      "offset" : 395,
+                      "length" : 38
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "ports_currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 36,
+                        "beginColumn" : 4,
+                        "endLine" : 36,
+                        "endColumn" : 39,
+                        "offset" : 1181,
+                        "length" : 35
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 19,
+                      "beginColumn" : 3,
+                      "endLine" : 19,
+                      "endColumn" : 43,
+                      "offset" : 436,
+                      "length" : 40
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "ports_currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 50,
+                        "beginColumn" : 4,
+                        "endLine" : 50,
+                        "endColumn" : 38,
+                        "offset" : 1415,
+                        "length" : 34
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempSensor"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 18,
+                      "beginColumn" : 3,
+                      "endLine" : 18,
+                      "endColumn" : 41,
+                      "offset" : 395,
+                      "length" : 38
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "ports_currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 36,
+                        "beginColumn" : 4,
+                        "endLine" : 36,
+                        "endColumn" : 39,
+                        "offset" : 1181,
+                        "length" : 35
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "opInterface"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 21,
+                      "beginColumn" : 3,
+                      "endLine" : 21,
+                      "endColumn" : 49,
+                      "offset" : 506,
+                      "length" : 46
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "ports_currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 81,
+                        "beginColumn" : 4,
+                        "endLine" : 81,
+                        "endColumn" : 38,
+                        "offset" : 1985,
+                        "length" : 34
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempSensor"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 18,
+                      "beginColumn" : 3,
+                      "endLine" : 18,
+                      "endColumn" : 41,
+                      "offset" : 395,
+                      "length" : 38
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempSensor", "ports_tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 37,
+                        "beginColumn" : 4,
+                        "endLine" : 37,
+                        "endColumn" : 27,
+                        "offset" : 1220,
+                        "length" : 23
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 19,
+                      "beginColumn" : 3,
+                      "endLine" : 19,
+                      "endColumn" : 43,
+                      "offset" : 436,
+                      "length" : 40
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "ports_tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 51,
+                        "beginColumn" : 4,
+                        "endLine" : 51,
+                        "endColumn" : 26,
+                        "offset" : 1453,
+                        "length" : 22
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 19,
+                      "beginColumn" : 3,
+                      "endLine" : 19,
+                      "endColumn" : 43,
+                      "offset" : 436,
+                      "length" : 40
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "ports_fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 34,
+                        "offset" : 1479,
+                        "length" : 30
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "fan"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 20,
+                      "beginColumn" : 3,
+                      "endLine" : 20,
+                      "endColumn" : 27,
+                      "offset" : 479,
+                      "length" : 24
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "ports_fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 67,
+                        "beginColumn" : 4,
+                        "endLine" : 67,
+                        "endColumn" : 33,
+                        "offset" : 1738,
+                        "length" : 29
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "fan"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 20,
+                      "beginColumn" : 3,
+                      "endLine" : 20,
+                      "endColumn" : 27,
+                      "offset" : 479,
+                      "length" : 24
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "fan", "ports_fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 68,
+                        "beginColumn" : 4,
+                        "endLine" : 68,
+                        "endColumn" : 34,
+                        "offset" : 1771,
+                        "length" : 30
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 19,
+                      "beginColumn" : 3,
+                      "endLine" : 19,
+                      "endColumn" : 43,
+                      "offset" : 436,
+                      "length" : 40
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "ports_fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 53,
+                        "beginColumn" : 4,
+                        "endLine" : 53,
+                        "endColumn" : 33,
+                        "offset" : 1513,
+                        "length" : 29
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["fake_it"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "opInterface"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 21,
+                      "beginColumn" : 3,
+                      "endLine" : 21,
+                      "endColumn" : 49,
+                      "offset" : 506,
+                      "length" : 46
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "opInterface", "ports_setPoint"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 82,
+                        "beginColumn" : 4,
+                        "endLine" : 82,
+                        "endColumn" : 41,
+                        "offset" : 2023,
+                        "length" : 37
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["tcs", "tcp", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temp-control\/TempControlAadl.sysml"
+                      },
+                      "beginLine" : 19,
+                      "beginColumn" : 3,
+                      "endLine" : 19,
+                      "endColumn" : 43,
+                      "offset" : 436,
+                      "length" : 40
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["tcs", "tcp", "tempControl", "ports_setPoint"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temp-control\/TempControlAadl.sysml"
+                        },
+                        "beginLine" : 54,
+                        "beginColumn" : 4,
+                        "endLine" : 54,
+                        "endColumn" : 40,
+                        "offset" : 1546,
+                        "length" : 36
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+              ],
+              "properties" : [
+              ]
+            }
           ],
           "properties" : [
           ],
@@ -1343,6 +2477,126 @@
   "annexLib" : [
   ],
   "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "ScalarValues::Integer"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::TempUnit"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Fahrenheit"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Celsius"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Kelvin"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    },
     {
       "type" : "Component",
       "identifier" : {
@@ -1410,6 +2664,46 @@
       "connectionInstances" : [
       ],
       "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "On"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Off"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
       ],
       "flows" : [
       ],
@@ -1448,6 +2742,46 @@
       "connectionInstances" : [
       ],
       "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Ok"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Error"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
       ],
       "flows" : [
       ],

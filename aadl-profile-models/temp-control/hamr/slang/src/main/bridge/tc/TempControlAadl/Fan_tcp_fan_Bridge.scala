@@ -15,28 +15,28 @@ import tc.TempControlAadl.{Fan_tcp_fan => component}
   val dispatchProtocol: DispatchPropertyProtocol,
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
-  fanCmd: Port[TempControlAadl.FanCmd],
-  fanAck: Port[TempControlAadl.FanAck]
+  ports_fanCmd: Port[TempControlAadl.FanCmd.Type],
+  ports_fanAck: Port[TempControlAadl.FanAck.Type]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(fanCmd,
-              fanAck),
+    all = ISZ(ports_fanCmd,
+              ports_fanAck),
 
     dataIns = ISZ(),
 
     dataOuts = ISZ(),
 
-    eventIns = ISZ(fanCmd),
+    eventIns = ISZ(ports_fanCmd),
 
-    eventOuts = ISZ(fanAck)
+    eventOuts = ISZ(ports_fanAck)
   )
 
   val initialization_api : Fan_Initialization_Api = {
     val api = Fan_Initialization_Api(
       id,
-      fanCmd.id,
-      fanAck.id
+      ports_fanCmd.id,
+      ports_fanAck.id
     )
     Fan_tcp_fan_Bridge.c_initialization_api = Some(api)
     api
@@ -45,8 +45,8 @@ import tc.TempControlAadl.{Fan_tcp_fan => component}
   val operational_api : Fan_Operational_Api = {
     val api = Fan_Operational_Api(
       id,
-      fanCmd.id,
-      fanAck.id
+      ports_fanCmd.id,
+      ports_fanAck.id
     )
     Fan_tcp_fan_Bridge.c_operational_api = Some(api)
     api
@@ -56,8 +56,8 @@ import tc.TempControlAadl.{Fan_tcp_fan => component}
     Fan_tcp_fan_Bridge.EntryPoints(
       id,
 
-      fanCmd.id,
-      fanAck.id,
+      ports_fanCmd.id,
+      ports_fanAck.id,
 
       dispatchTriggers,
 
@@ -72,19 +72,19 @@ object Fan_tcp_fan_Bridge {
 
   @datatype class EntryPoints(
     Fan_tcp_fan_BridgeId : Art.BridgeId,
-    fanCmd_Id : Art.PortId,
-    fanAck_Id : Art.PortId,
+    ports_fanCmd_Id : Art.PortId,
+    ports_fanAck_Id : Art.PortId,
     dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: Fan_Initialization_Api,
     operational_api: Fan_Operational_Api) extends Bridge.EntryPoints {
 
     val dataInPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ(fanCmd_Id)
+    val eventInPortIds: ISZ[Art.PortId] = ISZ(ports_fanCmd_Id)
 
     val dataOutPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(fanAck_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_fanAck_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Fan_Initialization_Api): Unit = {}
@@ -116,11 +116,11 @@ object Fan_tcp_fan_Bridge {
       Art.receiveInput(eventInPortIds, dataInPortIds)
 
       for(portId <- dispatchableEventPorts) {
-        if(portId == fanCmd_Id){
-          val Some(TempControlAadl.FanCmd_Payload(value)) = Art.getValue(fanCmd_Id)
+        if(portId == ports_fanCmd_Id){
+          val Some(TempControlAadl.FanCmd_Payload(value)) = Art.getValue(ports_fanCmd_Id)
 
-          // implement the following in 'component':  def handle_fanCmd(api: Fan_Operational_Api, value: TempControlAadl.FanCmd): Unit = {}
-          component.handle_fanCmd(operational_api, value)
+          // implement the following in 'component':  def handle_ports_fanCmd(api: Fan_Operational_Api, value: TempControlAadl.FanCmd.Type): Unit = {}
+          component.handle_ports_fanCmd(operational_api, value)
         }
       }
 
@@ -179,11 +179,11 @@ object Fan_tcp_fan_Bridge {
       Art.receiveInput(eventInPortIds, dataInPortIds)
 
       for(portId <- dispatchableEventPorts) {
-        if(portId == fanCmd_Id){
-          val Some(TempControlAadl.FanCmd_Payload(value)) = Art.getValue(fanCmd_Id)
+        if(portId == ports_fanCmd_Id){
+          val Some(TempControlAadl.FanCmd_Payload(value)) = Art.getValue(ports_fanCmd_Id)
 
-          // implement the following in 'component':  def handle_fanCmd(api: Fan_Operational_Api, value: TempControlAadl.FanCmd): Unit = {}
-          component.handle_fanCmd(operational_api, value)
+          // implement the following in 'component':  def handle_ports_fanCmd(api: Fan_Operational_Api, value: TempControlAadl.FanCmd.Type): Unit = {}
+          component.handle_ports_fanCmd(operational_api, value)
         }
       }
 

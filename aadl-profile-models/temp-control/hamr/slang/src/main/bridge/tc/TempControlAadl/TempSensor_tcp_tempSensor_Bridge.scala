@@ -15,28 +15,28 @@ import tc.TempControlAadl.{TempSensor_tcp_tempSensor => component}
   val dispatchProtocol: DispatchPropertyProtocol,
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
-  currentTemp: Port[TempControlAadl.Temperature],
-  tempChanged: Port[art.Empty]
+  ports_currentTemp: Port[TempControlAadl.Temperature],
+  ports_tempChanged: Port[art.Empty]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(currentTemp,
-              tempChanged),
+    all = ISZ(ports_currentTemp,
+              ports_tempChanged),
 
     dataIns = ISZ(),
 
-    dataOuts = ISZ(currentTemp),
+    dataOuts = ISZ(ports_currentTemp),
 
     eventIns = ISZ(),
 
-    eventOuts = ISZ(tempChanged)
+    eventOuts = ISZ(ports_tempChanged)
   )
 
   val initialization_api : TempSensor_Initialization_Api = {
     val api = TempSensor_Initialization_Api(
       id,
-      currentTemp.id,
-      tempChanged.id
+      ports_currentTemp.id,
+      ports_tempChanged.id
     )
     TempSensor_tcp_tempSensor_Bridge.c_initialization_api = Some(api)
     api
@@ -45,8 +45,8 @@ import tc.TempControlAadl.{TempSensor_tcp_tempSensor => component}
   val operational_api : TempSensor_Operational_Api = {
     val api = TempSensor_Operational_Api(
       id,
-      currentTemp.id,
-      tempChanged.id
+      ports_currentTemp.id,
+      ports_tempChanged.id
     )
     TempSensor_tcp_tempSensor_Bridge.c_operational_api = Some(api)
     api
@@ -56,8 +56,8 @@ import tc.TempControlAadl.{TempSensor_tcp_tempSensor => component}
     TempSensor_tcp_tempSensor_Bridge.EntryPoints(
       id,
 
-      currentTemp.id,
-      tempChanged.id,
+      ports_currentTemp.id,
+      ports_tempChanged.id,
 
       dispatchTriggers,
 
@@ -72,8 +72,8 @@ object TempSensor_tcp_tempSensor_Bridge {
 
   @datatype class EntryPoints(
     TempSensor_tcp_tempSensor_BridgeId : Art.BridgeId,
-    currentTemp_Id : Art.PortId,
-    tempChanged_Id : Art.PortId,
+    ports_currentTemp_Id : Art.PortId,
+    ports_tempChanged_Id : Art.PortId,
     dispatchTriggers : Option[ISZ[Art.PortId]],
     initialization_api: TempSensor_Initialization_Api,
     operational_api: TempSensor_Operational_Api) extends Bridge.EntryPoints {
@@ -82,9 +82,9 @@ object TempSensor_tcp_tempSensor_Bridge {
 
     val eventInPortIds: ISZ[Art.PortId] = ISZ()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(currentTemp_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_currentTemp_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(tempChanged_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_tempChanged_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempSensor_Initialization_Api): Unit = {}

@@ -9,18 +9,16 @@ import tc._
 object TempSensor_tcp_tempSensor {
 
   def initialise(api: TempSensor_Initialization_Api): Unit = {
-    // example api usage
-
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.put_currentTemp(TempControlAadl.Temperature.example())
-    api.put_tempChanged()
+    api.put_ports_currentTemp(Temperature.example())
+    api.put_ports_tempChanged()
   }
 
   def timeTriggered(api: TempSensor_Operational_Api): Unit = {
-    // example api usage
+    val temp = TempSensorNative.currentTempGet()
+    api.put_ports_currentTemp(temp)
+    api.put_ports_tempChanged()
+    val degree = Util.toFahrenheit(temp).degrees
+    api.logInfo(s"Sensed temperature: $degree F")// example api usage
 
 
   }
@@ -32,4 +30,8 @@ object TempSensor_tcp_tempSensor {
   def finalise(api: TempSensor_Operational_Api): Unit = { }
 
   def recover(api: TempSensor_Operational_Api): Unit = { }
+}
+
+@ext object TempSensorNative {
+  def currentTempGet(): Temperature = $
 }

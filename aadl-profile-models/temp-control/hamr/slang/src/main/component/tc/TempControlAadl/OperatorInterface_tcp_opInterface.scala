@@ -15,13 +15,13 @@ object OperatorInterface_tcp_opInterface {
     api.logDebug("Example debug logging")
     api.logError("Example error logging")
 
-    api.put_setPoint(TempControlAadl.Temperature.example())
+    api.put_ports_setPoint(TempControlAadl.Temperature.example())
   }
 
   def timeTriggered(api: OperatorInterface_Operational_Api): Unit = {
     // example api usage
 
-    val apiUsage_currentTemp: Option[TempControlAadl.Temperature] = api.get_currentTemp()
+    val apiUsage_currentTemp: Option[TempControlAadl.Temperature] = api.get_ports_currentTemp()
     api.logInfo(s"Received on currentTemp: ${apiUsage_currentTemp}")
   }
 

@@ -9,22 +9,18 @@ import tc._
 object Fan_tcp_fan {
 
   def initialise(api: Fan_Initialization_Api): Unit = {
-    // example api usage
 
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.put_fanAck(TempControlAadl.FanAck.example())
   }
 
-  def handle_fanCmd(api: Fan_Operational_Api, value : TempControlAadl.FanCmd): Unit = {
-    api.logInfo("example handle_fanCmd implementation")
-    api.logInfo(s"received ${value}")
+  def handle_ports_fanCmd(api: Fan_Operational_Api, value : TempControlAadl.FanCmd.Type): Unit = {
     // example api usage
+    api.logInfo(s"received fanCmd $value")
 
-    val apiUsage_fanCmd: Option[TempControlAadl.FanCmd] = api.get_fanCmd()
-    api.logInfo(s"Received on fanCmd: ${apiUsage_fanCmd}")
+    val ack = FanNative.fanCmdActuate(value)
+
+    api.put_ports_fanAck(ack)
+
+    api.logInfo(s"Actuation result: ${ack}")
   }
 
   def activate(api: Fan_Operational_Api): Unit = { }
@@ -34,4 +30,8 @@ object Fan_tcp_fan {
   def finalise(api: Fan_Operational_Api): Unit = { }
 
   def recover(api: Fan_Operational_Api): Unit = { }
+}
+
+@ext object FanNative {
+  def fanCmdActuate(cmd: FanCmd.Type): FanAck.Type = $
 }

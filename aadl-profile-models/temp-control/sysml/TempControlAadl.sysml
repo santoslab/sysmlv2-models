@@ -95,19 +95,19 @@ package TempControlAadl {
 	}
 	
 	enum def TempUnit {
-		enum Fahrenheit;
-		enum Celsius;
-		enum Kelvin;
+		Fahrenheit;
+		Celsius;
+		Kelvin;
 	}
 	
 	enum def FanCmd {
-		enum On;
-		enum Off;
+		On;
+		Off;
 	}
 	
 	enum def FanAck {
-		enum Ok;
-		enum Error;
+		Ok;
+		Error;
 	}
 
 }

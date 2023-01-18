@@ -8,15 +8,15 @@ import tc._
 
 @sig trait TempSensor_Api {
   def id: Art.BridgeId
-  def currentTemp_Id : Art.PortId
-  def tempChanged_Id : Art.PortId
+  def ports_currentTemp_Id : Art.PortId
+  def ports_tempChanged_Id : Art.PortId
 
-  def put_currentTemp(value : TempControlAadl.Temperature) : Unit = {
-    Art.putValue(currentTemp_Id, TempControlAadl.Temperature_Payload(value))
+  def put_ports_currentTemp(value : TempControlAadl.Temperature) : Unit = {
+    Art.putValue(ports_currentTemp_Id, TempControlAadl.Temperature_Payload(value))
   }
 
-  def put_tempChanged() : Unit = {
-    Art.putValue(tempChanged_Id, art.Empty())
+  def put_ports_tempChanged() : Unit = {
+    Art.putValue(ports_tempChanged_Id, art.Empty())
   }
 
   def logInfo(msg: String): Unit = {
@@ -34,12 +34,12 @@ import tc._
 
 @datatype class TempSensor_Initialization_Api (
   val id: Art.BridgeId,
-  val currentTemp_Id : Art.PortId,
-  val tempChanged_Id : Art.PortId) extends TempSensor_Api
+  val ports_currentTemp_Id : Art.PortId,
+  val ports_tempChanged_Id : Art.PortId) extends TempSensor_Api
 
 @datatype class TempSensor_Operational_Api (
   val id: Art.BridgeId,
-  val currentTemp_Id : Art.PortId,
-  val tempChanged_Id : Art.PortId) extends TempSensor_Api {
+  val ports_currentTemp_Id : Art.PortId,
+  val ports_tempChanged_Id : Art.PortId) extends TempSensor_Api {
 
 }
