@@ -51,7 +51,7 @@ package TempControlAadl {
 			in tempChanged: Event;
 			out fanCmd: EventData: FanCmd;
 			in fanAck: EventData: FanAck;
-			in setPoint: EventData: Temperature;
+			in setPoint: EventData: SetPoint;
 		}
 		
 		@Properties {
@@ -79,7 +79,7 @@ package TempControlAadl {
 		// features
 		port ports {
 			in currentTemp: Data: Temperature;
-			out setPoint: EventData: Temperature;
+			out setPoint: EventData: SetPoint;
 		}
 	
 		@Properties {
@@ -89,9 +89,14 @@ package TempControlAadl {
 	}
 
 	// Data Types
-	part def Temperature :> Base::DataValue {
+	attribute def Temperature :> Base::DataValue {
 		attribute degrees : ScalarValues::Integer;
 		attribute unit : TempUnit;
+	}
+	
+	attribute def SetPoint :> Base::DataValue {
+		attribute low : Temperature;
+		attribute high : Temperature;
 	}
 	
 	enum def TempUnit {

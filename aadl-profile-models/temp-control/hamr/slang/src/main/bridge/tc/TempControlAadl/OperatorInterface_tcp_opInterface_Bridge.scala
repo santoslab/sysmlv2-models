@@ -16,7 +16,7 @@ import tc.TempControlAadl.{OperatorInterface_tcp_opInterface => component}
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   ports_currentTemp: Port[TempControlAadl.Temperature],
-  ports_setPoint: Port[TempControlAadl.Temperature]
+  ports_setPoint: Port[TempControlAadl.SetPoint]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(

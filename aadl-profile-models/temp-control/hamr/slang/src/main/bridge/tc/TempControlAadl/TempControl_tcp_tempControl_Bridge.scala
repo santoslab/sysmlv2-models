@@ -19,7 +19,7 @@ import tc.TempControlAadl.{TempControl_tcp_tempControl => component}
   ports_tempChanged: Port[art.Empty],
   ports_fanCmd: Port[TempControlAadl.FanCmd.Type],
   ports_fanAck: Port[TempControlAadl.FanAck.Type],
-  ports_setPoint: Port[TempControlAadl.Temperature]
+  ports_setPoint: Port[TempControlAadl.SetPoint]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
@@ -149,9 +149,9 @@ object TempControl_tcp_tempControl_Bridge {
           component.handle_ports_fanAck(operational_api, value)
         }
         else if(portId == ports_setPoint_Id){
-          val Some(TempControlAadl.Temperature_Payload(value)) = Art.getValue(ports_setPoint_Id)
+          val Some(TempControlAadl.SetPoint_Payload(value)) = Art.getValue(ports_setPoint_Id)
 
-          // implement the following in 'component':  def handle_ports_setPoint(api: TempControl_Operational_Api, value: TempControlAadl.Temperature): Unit = {}
+          // implement the following in 'component':  def handle_ports_setPoint(api: TempControl_Operational_Api, value: TempControlAadl.SetPoint): Unit = {}
           component.handle_ports_setPoint(operational_api, value)
         }
       }
@@ -222,9 +222,9 @@ object TempControl_tcp_tempControl_Bridge {
           component.handle_ports_fanAck(operational_api, value)
         }
         else if(portId == ports_setPoint_Id){
-          val Some(TempControlAadl.Temperature_Payload(value)) = Art.getValue(ports_setPoint_Id)
+          val Some(TempControlAadl.SetPoint_Payload(value)) = Art.getValue(ports_setPoint_Id)
 
-          // implement the following in 'component':  def handle_ports_setPoint(api: TempControl_Operational_Api, value: TempControlAadl.Temperature): Unit = {}
+          // implement the following in 'component':  def handle_ports_setPoint(api: TempControl_Operational_Api, value: TempControlAadl.SetPoint): Unit = {}
           component.handle_ports_setPoint(operational_api, value)
         }
       }

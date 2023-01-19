@@ -11,8 +11,8 @@ import tc._
   def ports_currentTemp_Id : Art.PortId
   def ports_setPoint_Id : Art.PortId
 
-  def put_ports_setPoint(value : TempControlAadl.Temperature) : Unit = {
-    Art.putValue(ports_setPoint_Id, TempControlAadl.Temperature_Payload(value))
+  def put_ports_setPoint(value : TempControlAadl.SetPoint) : Unit = {
+    Art.putValue(ports_setPoint_Id, TempControlAadl.SetPoint_Payload(value))
   }
 
   def logInfo(msg: String): Unit = {

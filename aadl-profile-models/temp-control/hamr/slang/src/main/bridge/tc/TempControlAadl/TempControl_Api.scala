@@ -80,13 +80,13 @@ import tc._
     return value
   }
 
-  def get_ports_setPoint() : Option[TempControlAadl.Temperature] = {
-    val value : Option[TempControlAadl.Temperature] = Art.getValue(ports_setPoint_Id) match {
-      case Some(TempControlAadl.Temperature_Payload(v)) => Some(v)
+  def get_ports_setPoint() : Option[TempControlAadl.SetPoint] = {
+    val value : Option[TempControlAadl.SetPoint] = Art.getValue(ports_setPoint_Id) match {
+      case Some(TempControlAadl.SetPoint_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port ports_setPoint.  Expecting 'TempControlAadl.Temperature_Payload' but received ${v}")
-        None[TempControlAadl.Temperature]()
-      case _ => None[TempControlAadl.Temperature]()
+        Art.logError(id, s"Unexpected payload on port ports_setPoint.  Expecting 'TempControlAadl.SetPoint_Payload' but received ${v}")
+        None[TempControlAadl.SetPoint]()
+      case _ => None[TempControlAadl.SetPoint]()
     }
     return value
   }

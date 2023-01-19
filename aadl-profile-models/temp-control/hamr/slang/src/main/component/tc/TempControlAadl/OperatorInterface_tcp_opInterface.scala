@@ -15,7 +15,7 @@ object OperatorInterface_tcp_opInterface {
     api.logDebug("Example debug logging")
     api.logError("Example error logging")
 
-    api.put_ports_setPoint(TempControlAadl.Temperature.example())
+    api.put_ports_setPoint(TempControlAadl.SetPoint.example())
   }
 
   def timeTriggered(api: OperatorInterface_Operational_Api): Unit = {

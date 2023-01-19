@@ -29,7 +29,7 @@ object Arch {
     val ports_tempChanged = Port[art.Empty] (id = 3, name = "tcs_tcp_tempControl_ports_tempChanged", mode = EventIn)
     val ports_fanCmd = Port[TempControlAadl.FanCmd.Type] (id = 4, name = "tcs_tcp_tempControl_ports_fanCmd", mode = EventOut)
     val ports_fanAck = Port[TempControlAadl.FanAck.Type] (id = 5, name = "tcs_tcp_tempControl_ports_fanAck", mode = EventIn)
-    val ports_setPoint = Port[TempControlAadl.Temperature] (id = 6, name = "tcs_tcp_tempControl_ports_setPoint", mode = EventIn)
+    val ports_setPoint = Port[TempControlAadl.SetPoint] (id = 6, name = "tcs_tcp_tempControl_ports_setPoint", mode = EventIn)
 
     tc.TempControlAadl.TempControl_tcp_tempControl_Bridge(
       id = 1,
@@ -60,7 +60,7 @@ object Arch {
   }
   val tcs_tcp_opInterface : tc.TempControlAadl.OperatorInterface_tcp_opInterface_Bridge = {
     val ports_currentTemp = Port[TempControlAadl.Temperature] (id = 9, name = "tcs_tcp_opInterface_ports_currentTemp", mode = DataIn)
-    val ports_setPoint = Port[TempControlAadl.Temperature] (id = 10, name = "tcs_tcp_opInterface_ports_setPoint", mode = EventOut)
+    val ports_setPoint = Port[TempControlAadl.SetPoint] (id = 10, name = "tcs_tcp_opInterface_ports_setPoint", mode = EventOut)
 
     tc.TempControlAadl.OperatorInterface_tcp_opInterface_Bridge(
       id = 3,

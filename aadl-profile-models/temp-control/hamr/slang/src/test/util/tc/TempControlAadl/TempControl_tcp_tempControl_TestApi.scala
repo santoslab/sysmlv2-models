@@ -22,7 +22,7 @@ abstract class TempControl_tcp_tempControl_TestApi extends BridgeTestSuite[TempC
   def put_concrete_inputs(ports_currentTemp : TempControlAadl.Temperature,
                           ports_tempChanged : Z,
                           ports_fanAck : ISZ[TempControlAadl.FanAck.Type],
-                          ports_setPoint : ISZ[TempControlAadl.Temperature]): Unit = {
+                          ports_setPoint : ISZ[TempControlAadl.SetPoint]): Unit = {
     put_ports_currentTemp(ports_currentTemp)
     for(i <- 0 until ports_tempChanged) {
       put_ports_tempChanged()
@@ -73,8 +73,8 @@ abstract class TempControl_tcp_tempControl_TestApi extends BridgeTestSuite[TempC
   }
 
   // setter for in EventDataPort
-  def put_ports_setPoint(value : TempControlAadl.Temperature): Unit = {
-    ArtNative_Ext.insertInPortValue(bridge.operational_api.ports_setPoint_Id, TempControlAadl.Temperature_Payload(value))
+  def put_ports_setPoint(value : TempControlAadl.SetPoint): Unit = {
+    ArtNative_Ext.insertInPortValue(bridge.operational_api.ports_setPoint_Id, TempControlAadl.SetPoint_Payload(value))
   }
 
   // getter for out EventDataPort

@@ -260,7 +260,7 @@
                     "endLine" : 61,
                     "endColumn" : 3,
                     "offset" : 1350,
-                    "length" : 313
+                    "length" : 310
                   }
                 }
               },
@@ -405,7 +405,7 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Classifier",
-                      "name" : "TempControlAadl::Temperature"
+                      "name" : "TempControlAadl::SetPoint"
                     }
                   },
                   "properties" : [
@@ -512,7 +512,7 @@
                     "beginColumn" : 2,
                     "endLine" : 75,
                     "endColumn" : 3,
-                    "offset" : 1681,
+                    "offset" : 1678,
                     "length" : 201
                   }
                 }
@@ -685,8 +685,8 @@
                     "beginColumn" : 2,
                     "endLine" : 89,
                     "endColumn" : 3,
-                    "offset" : 1914,
-                    "length" : 226
+                    "offset" : 1911,
+                    "length" : 223
                   }
                 }
               },
@@ -751,7 +751,7 @@
                     "type" : "Some",
                     "value" : {
                       "type" : "Classifier",
-                      "name" : "TempControlAadl::Temperature"
+                      "name" : "TempControlAadl::SetPoint"
                     }
                   },
                   "properties" : [
@@ -1103,7 +1103,7 @@
                           "beginColumn" : 4,
                           "endLine" : 81,
                           "endColumn" : 38,
-                          "offset" : 1985,
+                          "offset" : 1982,
                           "length" : 34
                         }
                       }
@@ -1389,7 +1389,7 @@
                           "beginColumn" : 4,
                           "endLine" : 67,
                           "endColumn" : 33,
-                          "offset" : 1738,
+                          "offset" : 1735,
                           "length" : 29
                         }
                       }
@@ -1477,7 +1477,7 @@
                           "beginColumn" : 4,
                           "endLine" : 68,
                           "endColumn" : 34,
-                          "offset" : 1771,
+                          "offset" : 1768,
                           "length" : 30
                         }
                       }
@@ -1619,9 +1619,9 @@
                           "beginLine" : 82,
                           "beginColumn" : 4,
                           "endLine" : 82,
-                          "endColumn" : 41,
-                          "offset" : 2023,
-                          "length" : 37
+                          "endColumn" : 38,
+                          "offset" : 2020,
+                          "length" : 34
                         }
                       }
                     }
@@ -1674,9 +1674,9 @@
                           "beginLine" : 54,
                           "beginColumn" : 4,
                           "endLine" : 54,
-                          "endColumn" : 40,
+                          "endColumn" : 37,
                           "offset" : 1546,
-                          "length" : 36
+                          "length" : 33
                         }
                       }
                     }
@@ -1707,7 +1707,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "ctTStoTC", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -1831,7 +1831,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "ctTStoOI", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -1928,7 +1928,7 @@
                         "beginColumn" : 4,
                         "endLine" : 81,
                         "endColumn" : 38,
-                        "offset" : 1985,
+                        "offset" : 1982,
                         "length" : 34
                       }
                     }
@@ -1955,7 +1955,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "tcTStoTC", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2079,7 +2079,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "fcTCtoF", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2176,7 +2176,7 @@
                         "beginColumn" : 4,
                         "endLine" : 67,
                         "endColumn" : 33,
-                        "offset" : 1738,
+                        "offset" : 1735,
                         "length" : 29
                       }
                     }
@@ -2203,7 +2203,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "faFtoTC", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2247,7 +2247,7 @@
                         "beginColumn" : 4,
                         "endLine" : 68,
                         "endColumn" : 34,
-                        "offset" : 1771,
+                        "offset" : 1768,
                         "length" : 30
                       }
                     }
@@ -2327,7 +2327,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["fake_it"],
+                "name" : ["tcs", "tcp", "spOItoTC", "_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2370,9 +2370,9 @@
                         "beginLine" : 82,
                         "beginColumn" : 4,
                         "endLine" : 82,
-                        "endColumn" : 41,
-                        "offset" : 2023,
-                        "length" : 37
+                        "endColumn" : 38,
+                        "offset" : 2020,
+                        "length" : 34
                       }
                     }
                   }
@@ -2423,9 +2423,9 @@
                         "beginLine" : 54,
                         "beginColumn" : 4,
                         "endLine" : 54,
-                        "endColumn" : 40,
+                        "endColumn" : 37,
                         "offset" : 1546,
-                        "length" : 36
+                        "length" : 33
                       }
                     }
                   }
@@ -2477,126 +2477,6 @@
   "annexLib" : [
   ],
   "dataComponents" : [
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "ScalarValues::Integer"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
-    },
-    {
-      "type" : "Component",
-      "identifier" : {
-        "type" : "Name",
-        "name" : [],
-        "pos" : {
-          "type" : "None"
-        }
-      },
-      "category" : {
-        "type" : "ComponentCategory",
-        "value" : "Data"
-      },
-      "classifier" : {
-        "type" : "Some",
-        "value" : {
-          "type" : "Classifier",
-          "name" : "TempControlAadl::TempUnit"
-        }
-      },
-      "features" : [
-      ],
-      "subComponents" : [
-      ],
-      "connections" : [
-      ],
-      "connectionInstances" : [
-      ],
-      "properties" : [
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Data_Representation"],
-            "pos" : {
-              "type" : "None"
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Enum"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        },
-        {
-          "type" : "Property",
-          "name" : {
-            "type" : "Name",
-            "name" : ["Data_Model::Enumerators"],
-            "pos" : {
-              "type" : "None"
-            }
-          },
-          "propertyValues" : [
-            {
-              "type" : "ValueProp",
-              "value" : "Fahrenheit"
-            },
-            {
-              "type" : "ValueProp",
-              "value" : "Celsius"
-            },
-            {
-              "type" : "ValueProp",
-              "value" : "Kelvin"
-            }
-          ],
-          "appliesTo" : [
-          ]
-        }
-      ],
-      "flows" : [
-      ],
-      "modes" : [
-      ],
-      "annexes" : [
-      ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
-    },
     {
       "type" : "Component",
       "identifier" : {
@@ -2782,6 +2662,44 @@
           "appliesTo" : [
           ]
         }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::SetPoint"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
       ],
       "flows" : [
       ],

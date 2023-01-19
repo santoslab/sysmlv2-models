@@ -8,13 +8,13 @@ import tc._
 // This file will not be overwritten so is safe to edit
 object TempControl_tcp_tempControl {
 
-  var setPoint: SetPoint_i =
-    SetPoint_i(
+  var setPoint: SetPoint =
+    SetPoint(
       Temperature(Util.minTemp, TempUnit.Fahrenheit),
       Temperature(Util.maxTemp, TempUnit.Fahrenheit))
 
   def initialise(api: TempControl_Initialization_Api): Unit = {
-    setPoint = SetPoint_i(
+    setPoint = SetPoint(
       Temperature(Util.lowTemp, TempUnit.Fahrenheit),
       Temperature(Util.highTemp, TempUnit.Fahrenheit))
   }
@@ -41,7 +41,7 @@ object TempControl_tcp_tempControl {
     api.logInfo(s"received ${value}")
   }
 
-  def handle_ports_setPoint(api: TempControl_Operational_Api, value : TempControlAadl.Temperature): Unit = {
+  def handle_ports_setPoint(api: TempControl_Operational_Api, value : TempControlAadl.SetPoint): Unit = {
     api.logInfo("example handle_setPoint implementation")
     api.logInfo(s"received ${value}")
   }

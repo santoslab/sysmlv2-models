@@ -20,10 +20,10 @@ abstract class OperatorInterface_tcp_opInterface_TestApi extends BridgeTestSuite
    * @param ports_setPoint method that will be called with the payloads to be sent
    *        on the outgoing event data port 'ports_setPoint'.
    */
-  def check_concrete_output(ports_setPoint: ISZ[TempControlAadl.Temperature] => B = ports_setPointParam => {T}): Unit = {
+  def check_concrete_output(ports_setPoint: ISZ[TempControlAadl.SetPoint] => B = ports_setPointParam => {T}): Unit = {
     var testFailures: ISZ[ST] = ISZ()
 
-    var ports_setPointValue: ISZ[TempControlAadl.Temperature] = ISZ()
+    var ports_setPointValue: ISZ[TempControlAadl.SetPoint] = ISZ()
     // TODO: event data port getter should return all of the events/payloads
     //       received on event data ports when queue sizes > 1 support is added
     //       to ART
@@ -42,18 +42,18 @@ abstract class OperatorInterface_tcp_opInterface_TestApi extends BridgeTestSuite
   }
 
   // getter for out EventDataPort
-  def get_ports_setPoint(): Option[TempControlAadl.Temperature] = {
-    val value: Option[TempControlAadl.Temperature] = get_ports_setPoint_payload() match {
-      case Some(TempControlAadl.Temperature_Payload(v)) => Some(v)
-      case Some(v) => fail(s"Unexpected payload on port ports_setPoint.  Expecting 'TempControlAadl.Temperature_Payload' but received ${v}")
-      case _ => None[TempControlAadl.Temperature]()
+  def get_ports_setPoint(): Option[TempControlAadl.SetPoint] = {
+    val value: Option[TempControlAadl.SetPoint] = get_ports_setPoint_payload() match {
+      case Some(TempControlAadl.SetPoint_Payload(v)) => Some(v)
+      case Some(v) => fail(s"Unexpected payload on port ports_setPoint.  Expecting 'TempControlAadl.SetPoint_Payload' but received ${v}")
+      case _ => None[TempControlAadl.SetPoint]()
     }
     return value
   }
 
   // payload getter for out EventDataPort
-  def get_ports_setPoint_payload(): Option[TempControlAadl.Temperature_Payload] = {
-    return ArtNative_Ext.observeOutPortValue(bridge.initialization_api.ports_setPoint_Id).asInstanceOf[Option[TempControlAadl.Temperature_Payload]]
+  def get_ports_setPoint_payload(): Option[TempControlAadl.SetPoint_Payload] = {
+    return ArtNative_Ext.observeOutPortValue(bridge.initialization_api.ports_setPoint_Id).asInstanceOf[Option[TempControlAadl.SetPoint_Payload]]
   }
 
 }
