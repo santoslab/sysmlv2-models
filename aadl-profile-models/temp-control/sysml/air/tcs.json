@@ -133,7 +133,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -157,7 +157,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 }
               ],
               "subComponents" : [
@@ -302,7 +302,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -326,7 +326,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -354,7 +354,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -382,7 +382,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -410,7 +410,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 }
               ],
               "subComponents" : [
@@ -555,7 +555,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -583,7 +583,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 }
               ],
               "subComponents" : [
@@ -728,7 +728,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 },
                 {
                   "type" : "FeatureEnd",
@@ -756,7 +756,7 @@
                   },
                   "properties" : [
                   ],
-                  "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+                  "uriFrag" : ""
                 }
               ],
               "subComponents" : [
@@ -984,7 +984,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             },
             {
               "type" : "Connection",
@@ -1127,7 +1127,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             },
             {
               "type" : "Connection",
@@ -1270,7 +1270,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             },
             {
               "type" : "Connection",
@@ -1413,7 +1413,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             },
             {
               "type" : "Connection",
@@ -1556,7 +1556,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             },
             {
               "type" : "Connection",
@@ -1699,7 +1699,7 @@
               ],
               "properties" : [
               ],
-              "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+              "uriFrag" : ""
             }
           ],
           "connectionInstances" : [
@@ -2494,6 +2494,126 @@
         "type" : "Some",
         "value" : {
           "type" : "Classifier",
+          "name" : "Base_Types::Float_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TempControlAadl::TempUnit"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Fahrenheit"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Celsius"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Kelvin"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
           "name" : "TempControlAadl::Temperature"
         }
       },
@@ -2513,7 +2633,7 @@
       ],
       "annexes" : [
       ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+      "uriFrag" : ""
     },
     {
       "type" : "Component",
@@ -2591,7 +2711,7 @@
       ],
       "annexes" : [
       ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+      "uriFrag" : ""
     },
     {
       "type" : "Component",
@@ -2669,7 +2789,7 @@
       ],
       "annexes" : [
       ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+      "uriFrag" : ""
     },
     {
       "type" : "Component",
@@ -2707,7 +2827,7 @@
       ],
       "annexes" : [
       ],
-      "uriFrag" : "fake uri tag that's only needed if AWAS is invoked"
+      "uriFrag" : ""
     }
   ]
 }
