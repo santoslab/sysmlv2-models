@@ -3,7 +3,6 @@ package TempControlAadl {
 	import AADLProperties::*;
 	import AADLComponentTypes::*;
 	import AADLPortTypes::*;
-
 	
 	part tcs : TempControlSystem : System;
 	
@@ -89,12 +88,12 @@ package TempControlAadl {
 	}
 
 	// Data Types
-	attribute def Temperature :> Base::DataValue {
+	attribute def Temperature {
 		attribute degrees : ScalarValues::Integer;
 		attribute unit : TempUnit;
 	}
 	
-	attribute def SetPoint :> Base::DataValue {
+	attribute def SetPoint {
 		attribute low : Temperature;
 		attribute high : Temperature;
 	}

@@ -5,20 +5,20 @@ package tc.TempControlAadl
 import org.sireum._
 import tc._
 
-// This file will not be overwritten so is safe to edit
-
-// This is a type skeleton as HAMR doesn't know how to translate TempControlAadl::SetPoint
+// This file was auto-generated.  Do not edit
 
 object SetPoint {
   def example(): TempControlAadl.SetPoint = {
-    return SetPoint(
-      low = Temperature.example(),
-      high = Temperature.example())
+    return TempControlAadl.SetPoint(
+      low = TempControlAadl.Temperature.example(),
+      high = TempControlAadl.Temperature.example())
   }
 }
 
-@datatype class SetPoint(val low: Temperature,
-                         val high: Temperature)
+@datatype class SetPoint(
+  val low: TempControlAadl.Temperature,
+  val high: TempControlAadl.Temperature) {
+}
 
 object SetPoint_Payload {
   def example(): SetPoint_Payload = {

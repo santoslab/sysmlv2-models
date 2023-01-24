@@ -14,11 +14,11 @@
               "type" : "Some",
               "value" : "\/temp-control\/TempControlAadl.sysml"
             },
-            "beginLine" : 11,
+            "beginLine" : 10,
             "beginColumn" : 2,
-            "endLine" : 14,
+            "endLine" : 13,
             "endColumn" : 3,
-            "offset" : 226,
+            "offset" : 225,
             "length" : 103
           }
         }
@@ -50,11 +50,11 @@
                   "type" : "Some",
                   "value" : "\/temp-control\/TempControlAadl.sysml"
                 },
-                "beginLine" : 16,
+                "beginLine" : 15,
                 "beginColumn" : 2,
-                "endLine" : 30,
+                "endLine" : 29,
                 "endColumn" : 3,
-                "offset" : 333,
+                "offset" : 332,
                 "length" : 759
               }
             }
@@ -86,11 +86,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 33,
+                    "beginLine" : 32,
                     "beginColumn" : 2,
-                    "endLine" : 44,
+                    "endLine" : 43,
                     "endColumn" : 3,
-                    "offset" : 1118,
+                    "offset" : 1117,
                     "length" : 206
                   }
                 }
@@ -255,11 +255,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 47,
+                    "beginLine" : 46,
                     "beginColumn" : 2,
-                    "endLine" : 61,
+                    "endLine" : 60,
                     "endColumn" : 3,
-                    "offset" : 1350,
+                    "offset" : 1349,
                     "length" : 310
                   }
                 }
@@ -508,11 +508,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 64,
+                    "beginLine" : 63,
                     "beginColumn" : 2,
-                    "endLine" : 75,
+                    "endLine" : 74,
                     "endColumn" : 3,
-                    "offset" : 1678,
+                    "offset" : 1677,
                     "length" : 201
                   }
                 }
@@ -681,11 +681,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 78,
+                    "beginLine" : 77,
                     "beginColumn" : 2,
-                    "endLine" : 89,
+                    "endLine" : 88,
                     "endColumn" : 3,
-                    "offset" : 1911,
+                    "offset" : 1910,
                     "length" : 223
                   }
                 }
@@ -856,11 +856,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 24,
+                    "beginLine" : 23,
                     "beginColumn" : 3,
-                    "endLine" : 24,
+                    "endLine" : 23,
                     "endColumn" : 93,
-                    "offset" : 575,
+                    "offset" : 574,
                     "length" : 90
                   }
                 }
@@ -879,11 +879,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 18,
+                        "beginLine" : 17,
                         "beginColumn" : 3,
-                        "endLine" : 18,
+                        "endLine" : 17,
                         "endColumn" : 41,
-                        "offset" : 395,
+                        "offset" : 394,
                         "length" : 38
                       }
                     }
@@ -901,11 +901,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 36,
+                          "beginLine" : 35,
                           "beginColumn" : 4,
-                          "endLine" : 36,
+                          "endLine" : 35,
                           "endColumn" : 39,
-                          "offset" : 1181,
+                          "offset" : 1180,
                           "length" : 35
                         }
                       }
@@ -934,11 +934,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 19,
+                        "beginLine" : 18,
                         "beginColumn" : 3,
-                        "endLine" : 19,
+                        "endLine" : 18,
                         "endColumn" : 43,
-                        "offset" : 436,
+                        "offset" : 435,
                         "length" : 40
                       }
                     }
@@ -956,11 +956,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 50,
+                          "beginLine" : 49,
                           "beginColumn" : 4,
-                          "endLine" : 50,
+                          "endLine" : 49,
                           "endColumn" : 38,
-                          "offset" : 1415,
+                          "offset" : 1414,
                           "length" : 34
                         }
                       }
@@ -999,11 +999,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 25,
+                    "beginLine" : 24,
                     "beginColumn" : 3,
-                    "endLine" : 25,
+                    "endLine" : 24,
                     "endColumn" : 93,
-                    "offset" : 668,
+                    "offset" : 667,
                     "length" : 90
                   }
                 }
@@ -1022,11 +1022,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 18,
+                        "beginLine" : 17,
                         "beginColumn" : 3,
-                        "endLine" : 18,
+                        "endLine" : 17,
                         "endColumn" : 41,
-                        "offset" : 395,
+                        "offset" : 394,
                         "length" : 38
                       }
                     }
@@ -1044,11 +1044,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 36,
+                          "beginLine" : 35,
                           "beginColumn" : 4,
-                          "endLine" : 36,
+                          "endLine" : 35,
                           "endColumn" : 39,
-                          "offset" : 1181,
+                          "offset" : 1180,
                           "length" : 35
                         }
                       }
@@ -1077,11 +1077,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 21,
+                        "beginLine" : 20,
                         "beginColumn" : 3,
-                        "endLine" : 21,
+                        "endLine" : 20,
                         "endColumn" : 49,
-                        "offset" : 506,
+                        "offset" : 505,
                         "length" : 46
                       }
                     }
@@ -1099,11 +1099,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 81,
+                          "beginLine" : 80,
                           "beginColumn" : 4,
-                          "endLine" : 81,
+                          "endLine" : 80,
                           "endColumn" : 38,
-                          "offset" : 1982,
+                          "offset" : 1981,
                           "length" : 34
                         }
                       }
@@ -1142,11 +1142,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 26,
+                    "beginLine" : 25,
                     "beginColumn" : 3,
-                    "endLine" : 26,
+                    "endLine" : 25,
                     "endColumn" : 93,
-                    "offset" : 761,
+                    "offset" : 760,
                     "length" : 90
                   }
                 }
@@ -1165,11 +1165,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 18,
+                        "beginLine" : 17,
                         "beginColumn" : 3,
-                        "endLine" : 18,
+                        "endLine" : 17,
                         "endColumn" : 41,
-                        "offset" : 395,
+                        "offset" : 394,
                         "length" : 38
                       }
                     }
@@ -1187,11 +1187,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 37,
+                          "beginLine" : 36,
                           "beginColumn" : 4,
-                          "endLine" : 37,
+                          "endLine" : 36,
                           "endColumn" : 27,
-                          "offset" : 1220,
+                          "offset" : 1219,
                           "length" : 23
                         }
                       }
@@ -1220,11 +1220,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 19,
+                        "beginLine" : 18,
                         "beginColumn" : 3,
-                        "endLine" : 19,
+                        "endLine" : 18,
                         "endColumn" : 43,
-                        "offset" : 436,
+                        "offset" : 435,
                         "length" : 40
                       }
                     }
@@ -1242,11 +1242,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 51,
+                          "beginLine" : 50,
                           "beginColumn" : 4,
-                          "endLine" : 51,
+                          "endLine" : 50,
                           "endColumn" : 26,
-                          "offset" : 1453,
+                          "offset" : 1452,
                           "length" : 22
                         }
                       }
@@ -1285,11 +1285,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 27,
+                    "beginLine" : 26,
                     "beginColumn" : 3,
-                    "endLine" : 27,
+                    "endLine" : 26,
                     "endColumn" : 75,
-                    "offset" : 854,
+                    "offset" : 853,
                     "length" : 72
                   }
                 }
@@ -1308,11 +1308,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 19,
+                        "beginLine" : 18,
                         "beginColumn" : 3,
-                        "endLine" : 19,
+                        "endLine" : 18,
                         "endColumn" : 43,
-                        "offset" : 436,
+                        "offset" : 435,
                         "length" : 40
                       }
                     }
@@ -1330,11 +1330,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 52,
+                          "beginLine" : 51,
                           "beginColumn" : 4,
-                          "endLine" : 52,
+                          "endLine" : 51,
                           "endColumn" : 34,
-                          "offset" : 1479,
+                          "offset" : 1478,
                           "length" : 30
                         }
                       }
@@ -1363,11 +1363,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 20,
+                        "beginLine" : 19,
                         "beginColumn" : 3,
-                        "endLine" : 20,
+                        "endLine" : 19,
                         "endColumn" : 27,
-                        "offset" : 479,
+                        "offset" : 478,
                         "length" : 24
                       }
                     }
@@ -1385,11 +1385,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 67,
+                          "beginLine" : 66,
                           "beginColumn" : 4,
-                          "endLine" : 67,
+                          "endLine" : 66,
                           "endColumn" : 33,
-                          "offset" : 1735,
+                          "offset" : 1734,
                           "length" : 29
                         }
                       }
@@ -1428,11 +1428,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 28,
+                    "beginLine" : 27,
                     "beginColumn" : 3,
-                    "endLine" : 28,
+                    "endLine" : 27,
                     "endColumn" : 75,
-                    "offset" : 929,
+                    "offset" : 928,
                     "length" : 72
                   }
                 }
@@ -1451,11 +1451,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 20,
+                        "beginLine" : 19,
                         "beginColumn" : 3,
-                        "endLine" : 20,
+                        "endLine" : 19,
                         "endColumn" : 27,
-                        "offset" : 479,
+                        "offset" : 478,
                         "length" : 24
                       }
                     }
@@ -1473,11 +1473,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 68,
+                          "beginLine" : 67,
                           "beginColumn" : 4,
-                          "endLine" : 68,
+                          "endLine" : 67,
                           "endColumn" : 34,
-                          "offset" : 1768,
+                          "offset" : 1767,
                           "length" : 30
                         }
                       }
@@ -1506,11 +1506,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 19,
+                        "beginLine" : 18,
                         "beginColumn" : 3,
-                        "endLine" : 19,
+                        "endLine" : 18,
                         "endColumn" : 43,
-                        "offset" : 436,
+                        "offset" : 435,
                         "length" : 40
                       }
                     }
@@ -1528,11 +1528,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 53,
+                          "beginLine" : 52,
                           "beginColumn" : 4,
-                          "endLine" : 53,
+                          "endLine" : 52,
                           "endColumn" : 33,
-                          "offset" : 1513,
+                          "offset" : 1512,
                           "length" : 29
                         }
                       }
@@ -1571,11 +1571,11 @@
                       "type" : "Some",
                       "value" : "\/temp-control\/TempControlAadl.sysml"
                     },
-                    "beginLine" : 29,
+                    "beginLine" : 28,
                     "beginColumn" : 3,
-                    "endLine" : 29,
+                    "endLine" : 28,
                     "endColumn" : 88,
-                    "offset" : 1004,
+                    "offset" : 1003,
                     "length" : 85
                   }
                 }
@@ -1594,11 +1594,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 21,
+                        "beginLine" : 20,
                         "beginColumn" : 3,
-                        "endLine" : 21,
+                        "endLine" : 20,
                         "endColumn" : 49,
-                        "offset" : 506,
+                        "offset" : 505,
                         "length" : 46
                       }
                     }
@@ -1616,11 +1616,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 82,
+                          "beginLine" : 81,
                           "beginColumn" : 4,
-                          "endLine" : 82,
+                          "endLine" : 81,
                           "endColumn" : 38,
-                          "offset" : 2020,
+                          "offset" : 2019,
                           "length" : 34
                         }
                       }
@@ -1649,11 +1649,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 19,
+                        "beginLine" : 18,
                         "beginColumn" : 3,
-                        "endLine" : 19,
+                        "endLine" : 18,
                         "endColumn" : 43,
-                        "offset" : 436,
+                        "offset" : 435,
                         "length" : 40
                       }
                     }
@@ -1671,11 +1671,11 @@
                             "type" : "Some",
                             "value" : "\/temp-control\/TempControlAadl.sysml"
                           },
-                          "beginLine" : 54,
+                          "beginLine" : 53,
                           "beginColumn" : 4,
-                          "endLine" : 54,
+                          "endLine" : 53,
                           "endColumn" : 37,
-                          "offset" : 1546,
+                          "offset" : 1545,
                           "length" : 33
                         }
                       }
@@ -1725,11 +1725,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 18,
+                      "beginLine" : 17,
                       "beginColumn" : 3,
-                      "endLine" : 18,
+                      "endLine" : 17,
                       "endColumn" : 41,
-                      "offset" : 395,
+                      "offset" : 394,
                       "length" : 38
                     }
                   }
@@ -1747,11 +1747,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 36,
+                        "beginLine" : 35,
                         "beginColumn" : 4,
-                        "endLine" : 36,
+                        "endLine" : 35,
                         "endColumn" : 39,
-                        "offset" : 1181,
+                        "offset" : 1180,
                         "length" : 35
                       }
                     }
@@ -1778,11 +1778,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 19,
+                      "beginLine" : 18,
                       "beginColumn" : 3,
-                      "endLine" : 19,
+                      "endLine" : 18,
                       "endColumn" : 43,
-                      "offset" : 436,
+                      "offset" : 435,
                       "length" : 40
                     }
                   }
@@ -1800,11 +1800,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 50,
+                        "beginLine" : 49,
                         "beginColumn" : 4,
-                        "endLine" : 50,
+                        "endLine" : 49,
                         "endColumn" : 38,
-                        "offset" : 1415,
+                        "offset" : 1414,
                         "length" : 34
                       }
                     }
@@ -1849,11 +1849,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 18,
+                      "beginLine" : 17,
                       "beginColumn" : 3,
-                      "endLine" : 18,
+                      "endLine" : 17,
                       "endColumn" : 41,
-                      "offset" : 395,
+                      "offset" : 394,
                       "length" : 38
                     }
                   }
@@ -1871,11 +1871,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 36,
+                        "beginLine" : 35,
                         "beginColumn" : 4,
-                        "endLine" : 36,
+                        "endLine" : 35,
                         "endColumn" : 39,
-                        "offset" : 1181,
+                        "offset" : 1180,
                         "length" : 35
                       }
                     }
@@ -1902,11 +1902,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 21,
+                      "beginLine" : 20,
                       "beginColumn" : 3,
-                      "endLine" : 21,
+                      "endLine" : 20,
                       "endColumn" : 49,
-                      "offset" : 506,
+                      "offset" : 505,
                       "length" : 46
                     }
                   }
@@ -1924,11 +1924,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 81,
+                        "beginLine" : 80,
                         "beginColumn" : 4,
-                        "endLine" : 81,
+                        "endLine" : 80,
                         "endColumn" : 38,
-                        "offset" : 1982,
+                        "offset" : 1981,
                         "length" : 34
                       }
                     }
@@ -1973,11 +1973,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 18,
+                      "beginLine" : 17,
                       "beginColumn" : 3,
-                      "endLine" : 18,
+                      "endLine" : 17,
                       "endColumn" : 41,
-                      "offset" : 395,
+                      "offset" : 394,
                       "length" : 38
                     }
                   }
@@ -1995,11 +1995,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 37,
+                        "beginLine" : 36,
                         "beginColumn" : 4,
-                        "endLine" : 37,
+                        "endLine" : 36,
                         "endColumn" : 27,
-                        "offset" : 1220,
+                        "offset" : 1219,
                         "length" : 23
                       }
                     }
@@ -2026,11 +2026,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 19,
+                      "beginLine" : 18,
                       "beginColumn" : 3,
-                      "endLine" : 19,
+                      "endLine" : 18,
                       "endColumn" : 43,
-                      "offset" : 436,
+                      "offset" : 435,
                       "length" : 40
                     }
                   }
@@ -2048,11 +2048,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 51,
+                        "beginLine" : 50,
                         "beginColumn" : 4,
-                        "endLine" : 51,
+                        "endLine" : 50,
                         "endColumn" : 26,
-                        "offset" : 1453,
+                        "offset" : 1452,
                         "length" : 22
                       }
                     }
@@ -2097,11 +2097,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 19,
+                      "beginLine" : 18,
                       "beginColumn" : 3,
-                      "endLine" : 19,
+                      "endLine" : 18,
                       "endColumn" : 43,
-                      "offset" : 436,
+                      "offset" : 435,
                       "length" : 40
                     }
                   }
@@ -2119,11 +2119,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 52,
+                        "beginLine" : 51,
                         "beginColumn" : 4,
-                        "endLine" : 52,
+                        "endLine" : 51,
                         "endColumn" : 34,
-                        "offset" : 1479,
+                        "offset" : 1478,
                         "length" : 30
                       }
                     }
@@ -2150,11 +2150,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 20,
+                      "beginLine" : 19,
                       "beginColumn" : 3,
-                      "endLine" : 20,
+                      "endLine" : 19,
                       "endColumn" : 27,
-                      "offset" : 479,
+                      "offset" : 478,
                       "length" : 24
                     }
                   }
@@ -2172,11 +2172,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 67,
+                        "beginLine" : 66,
                         "beginColumn" : 4,
-                        "endLine" : 67,
+                        "endLine" : 66,
                         "endColumn" : 33,
-                        "offset" : 1735,
+                        "offset" : 1734,
                         "length" : 29
                       }
                     }
@@ -2221,11 +2221,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 20,
+                      "beginLine" : 19,
                       "beginColumn" : 3,
-                      "endLine" : 20,
+                      "endLine" : 19,
                       "endColumn" : 27,
-                      "offset" : 479,
+                      "offset" : 478,
                       "length" : 24
                     }
                   }
@@ -2243,11 +2243,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 68,
+                        "beginLine" : 67,
                         "beginColumn" : 4,
-                        "endLine" : 68,
+                        "endLine" : 67,
                         "endColumn" : 34,
-                        "offset" : 1768,
+                        "offset" : 1767,
                         "length" : 30
                       }
                     }
@@ -2274,11 +2274,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 19,
+                      "beginLine" : 18,
                       "beginColumn" : 3,
-                      "endLine" : 19,
+                      "endLine" : 18,
                       "endColumn" : 43,
-                      "offset" : 436,
+                      "offset" : 435,
                       "length" : 40
                     }
                   }
@@ -2296,11 +2296,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 53,
+                        "beginLine" : 52,
                         "beginColumn" : 4,
-                        "endLine" : 53,
+                        "endLine" : 52,
                         "endColumn" : 33,
-                        "offset" : 1513,
+                        "offset" : 1512,
                         "length" : 29
                       }
                     }
@@ -2345,11 +2345,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 21,
+                      "beginLine" : 20,
                       "beginColumn" : 3,
-                      "endLine" : 21,
+                      "endLine" : 20,
                       "endColumn" : 49,
-                      "offset" : 506,
+                      "offset" : 505,
                       "length" : 46
                     }
                   }
@@ -2367,11 +2367,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 82,
+                        "beginLine" : 81,
                         "beginColumn" : 4,
-                        "endLine" : 82,
+                        "endLine" : 81,
                         "endColumn" : 38,
-                        "offset" : 2020,
+                        "offset" : 2019,
                         "length" : 34
                       }
                     }
@@ -2398,11 +2398,11 @@
                         "type" : "Some",
                         "value" : "\/temp-control\/TempControlAadl.sysml"
                       },
-                      "beginLine" : 19,
+                      "beginLine" : 18,
                       "beginColumn" : 3,
-                      "endLine" : 19,
+                      "endLine" : 18,
                       "endColumn" : 43,
-                      "offset" : 436,
+                      "offset" : 435,
                       "length" : 40
                     }
                   }
@@ -2420,11 +2420,11 @@
                           "type" : "Some",
                           "value" : "\/temp-control\/TempControlAadl.sysml"
                         },
-                        "beginLine" : 54,
+                        "beginLine" : 53,
                         "beginColumn" : 4,
-                        "endLine" : 54,
+                        "endLine" : 53,
                         "endColumn" : 37,
-                        "offset" : 1546,
+                        "offset" : 1545,
                         "length" : 33
                       }
                     }
@@ -2620,6 +2620,126 @@
       "features" : [
       ],
       "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["degrees"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["unit"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TempControlAadl::TempUnit"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Enum"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Enumerators"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Fahrenheit"
+                },
+                {
+                  "type" : "ValueProp",
+                  "value" : "Celsius"
+                },
+                {
+                  "type" : "ValueProp",
+                  "value" : "Kelvin"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
       ],
       "connections" : [
       ],
@@ -2814,6 +2934,322 @@
       "features" : [
       ],
       "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["low"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TempControlAadl::Temperature"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["degrees"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Float_32"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["unit"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::TempUnit"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Fahrenheit"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Celsius"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Kelvin"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["high"],
+            "pos" : {
+              "type" : "None"
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TempControlAadl::Temperature"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["degrees"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Float_32"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["unit"],
+                "pos" : {
+                  "type" : "None"
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TempControlAadl::TempUnit"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Fahrenheit"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Celsius"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Kelvin"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : ""
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : ""
+        }
       ],
       "connections" : [
       ],
