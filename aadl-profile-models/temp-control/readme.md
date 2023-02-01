@@ -20,7 +20,9 @@ This will use the mocked-up devices implemented in the Slang extensions (e.g. [m
 #### Circuit Diagram
 ![circuit_diagram.jpg](circuit_diagram.jpg)
 
-This uses the DeviceBridge interface (e.g. [getting the current temperature](hamr/slang/src/main/component/tc/TempControlAadl/TempSensorNative_Ext.scala#L11-L12)) in order to communicate with the board.That code is located under [hamr/slang/src/main/component/tc/TempControlAadl/device](hamr/slang/src/main/component/tc/TempControlAadl/device)
+This uses the DeviceBridge interface (e.g. [getting the current temperature](hamr/slang/src/main/component/tc/TempControlAadl/TempSensorNative_Ext.scala#L11-L12)) in order to communicate with the board. The board related code is located under [hamr/slang/src/main/component/tc/TempControlAadl/device](hamr/slang/src/main/component/tc/TempControlAadl/device)
+
+Board Layout
 
 - Potentiometer simulates a temp sensor.  It's range is set to be b/w 70 F and 100 F.
 
