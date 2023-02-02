@@ -2,11 +2,11 @@ package TempControlAadl {
 
 	import AADLProperties::*;
 	import AADLComponentTypes::*;
-	import AADLPortTypes::*;
+	import AADLFeatureTypes::*;
+	import Base_Types::*;
 	
 	part tcs : TempControlSystem : System;
 	
-	// TempControl System (Added purely to conform with the AADL model)
 	part def TempControlSystem :> System {
 		// subcomponents
 		part tcp : TempControlProcess : Process;
@@ -42,7 +42,6 @@ package TempControlAadl {
 		}
 	}
 
-	// TempControl Thread
 	part def TempControl :> Thread {
 		// features
 		port ports {
@@ -59,7 +58,6 @@ package TempControlAadl {
 		}
 	}
 
-	// Fan Thread
 	part def Fan :> Thread {
 		// features
 		port ports {
@@ -73,7 +71,6 @@ package TempControlAadl {
 		}
 	}
 
-	// OperatorInterface Thread
 	part def OperatorInterface :> Thread {
 		// features
 		port ports {
@@ -89,7 +86,7 @@ package TempControlAadl {
 
 	// Data Types
 	attribute def Temperature {
-		attribute degrees : ScalarValues::Integer;
+		attribute degrees : Base_Types::Float_32;
 		attribute unit : TempUnit;
 	}
 	
@@ -113,5 +110,4 @@ package TempControlAadl {
 		Ok;
 		Error;
 	}
-
 }
