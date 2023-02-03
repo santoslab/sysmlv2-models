@@ -1,9 +1,7 @@
 package TempControlAadl {
 
-	import AADLProperties::*;
-	import AADLComponentTypes::*;
-	import AADLFeatureTypes::*;
-	import Base_Types::*;
+	import AADL_Properties::*;
+	import AADL_Definitions::*;
 	
 	part tcs : TempControlSystem : System;
 	
@@ -29,7 +27,7 @@ package TempControlAadl {
 	}
 	
 	// TempSensor Thread
-	part def TempSensor :> Thread{
+	part def TempSensor :> Thread {
 		// features
 		port ports {
 			out currentTemp: Data: Temperature;

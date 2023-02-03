@@ -1,114 +1,98 @@
 package Base_Types {
 	
-	import AADLProperties::*;
+	import AADL_Properties::*;
+	import AADL_Data_Model::*;
+	import SI::*;
 	
-	datatype Boolean :> ScalarValues::Boolean {
-		@Data_Properties {
-			Data_Representation = Supported_Data_Representations::Boolean;
-		}
-	}
+	alias Boolean for ScalarValues::Boolean;
 
-    datatype Integer :> ScalarValues::Integer {
-    	@Data_Properties {
-    		Data_Representation = Supported_Data_Representations::Integer;
-    	}
-    }
+    alias Integer for ScalarValues::Integer;
 
     datatype Integer_8 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 8;
-    		Number_Representation = Supported_Number_Representations::Signed;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 8 [bit];
+    		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_16 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 16;
-    		Number_Representation = Supported_Number_Representations::Signed;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 16 [bit];
+    		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_32 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 32;
-    		Number_Representation = Supported_Number_Representations::Signed;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 32 [bit];
+    		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_64 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 64;
-    		Number_Representation = Supported_Number_Representations::Signed;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 64 [bit];
+    		Number_Representation = Signed;
     	}
     }
 
     datatype Unsigned_8 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 8;
-    		Number_Representation = Supported_Number_Representations::Unsigned;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 8 [bit];
+    		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_16 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 16;
-    		Number_Representation = Supported_Number_Representations::Unsigned;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 16 [bit];
+    		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_32 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 32;
-    		Number_Representation = Supported_Number_Representations::Unsigned;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 32 [bit];
+    		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_64 :> Integer {
-    	@Data_Properties {
-    		Data_Size = 64;
-    		Number_Representation = Supported_Number_Representations::Unsigned;
-    		Data_Representation = Supported_Data_Representations::Integer;
+    	@Properties {
+    		Data_Size = 64 [bit];
+    		Number_Representation = Unsigned;
     	}
     }
 
-    datatype Float :> ScalarValues::Rational {
-    	@Data_Properties {
-    		Data_Representation = Supported_Data_Representations::Float;
-    	}
-    }
+	datatype Natural :> Integer {
+		@Properties {
+			// TODO: how to properly express ranges in sysml
+			
+			// TODO: AADL's high range is 2^32 but kerml apparently
+			//   stores ScalarValues::Integer as signed 32 bit ints so
+			//   2147483647 is the largest value allowed
+			
+			Integer_Range = Range(0, 2147483647);
+		}	
+	}
+	
+    alias Float for ScalarValues::Rational;
     
     datatype Float_32 :> Float {
-    	@Data_Properties {
-    		Data_Size = 32;
-    		IEEE754_Precision = Supported_Precisions::Simple;
-    		Data_Representation = Supported_Data_Representations::Float;
+    	@Properties {
+    		Data_Size = 32 [bit];
+    		IEEE754_Precision = Simple;
     	}
     }
     
     datatype Float_64 :> Float {
-    	@Data_Properties {
-    		Data_Size = 64;
-    		IEEE754_Precision = Supported_Precisions::Simple;
-    		Data_Representation = Supported_Data_Representations::Float;
+    	@Properties {
+    		Data_Size = 64 [bit];
+    		IEEE754_Precision = Double;
     	}
     }
     
-    datatype String :> ScalarValues::String {
-    	@Data_Properties {
-    		Data_Representation = Data_Representation::String;
-    	}
-    }
+    alias String for ScalarValues::String;
     
-    datatype Character {
-    	@Data_Properties {
-    		Data_Representation = Data_Representation::Character;
-    	}
-    }
+    datatype Character;
 }
