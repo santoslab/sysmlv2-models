@@ -42,7 +42,7 @@ note of its port (e.g. it will look something like ``/dev/cu.usbmodem14301``)
 1. Select ``File >> Examples >> Firmata >> StandardFirmata`` and upload
 that to the board
 
-1. Open the slang embedded project in IVE by following the instructions in [hamr/slang/bin/project.cmd](hamr/slang/bin/project.cmd) 
+1. Open the Slang embedded project in IVE by following the instructions in [hamr/slang/bin/project.cmd](hamr/slang/bin/project.cmd#L19-L50) 
 
 1. Change [DeviceBridge.port](hamr/slang/src/main/component/tc/TempControlAadl/device/DeviceBridge.scala#L8) so that it matches the board's port
 
