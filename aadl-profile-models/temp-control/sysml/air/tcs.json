@@ -1707,7 +1707,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "ctTStoTC", "_0"],
+                "name" : ["tcs", "tcp", "ctTStoTC", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -1831,7 +1831,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "ctTStoOI", "_0"],
+                "name" : ["tcs", "tcp", "ctTStoOI", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -1955,7 +1955,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "tcTStoTC", "_0"],
+                "name" : ["tcs", "tcp", "tcTStoTC", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2079,7 +2079,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "fcTCtoF", "_0"],
+                "name" : ["tcs", "tcp", "fcTCtoF", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2203,7 +2203,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "faFtoTC", "_0"],
+                "name" : ["tcs", "tcp", "faFtoTC", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }
@@ -2327,7 +2327,7 @@
               "type" : "ConnectionInstance",
               "name" : {
                 "type" : "Name",
-                "name" : ["tcs", "tcp", "spOItoTC", "_0"],
+                "name" : ["tcs", "tcp", "spOItoTC", "_connectionInstance_0"],
                 "pos" : {
                   "type" : "None"
                 }

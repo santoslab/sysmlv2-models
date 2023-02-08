@@ -21,55 +21,7 @@ import art.scheduling.static.StaticScheduler
 object Schedulers {
 
 
-  val rts_actuatorsMock_actuatorsMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_eventControlMock_eventControlMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_instrumentationMock_instrumentationMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
-    computeExecutionTime = None(),
-    domain = None())
-
-  val rts_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+  val rts_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
     computeExecutionTime = None(),
     domain = None())
 
@@ -77,7 +29,55 @@ object Schedulers {
     computeExecutionTime = None(),
     domain = None())
 
-  val rts_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+  val rts_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_instrumentationMock_instrumentationMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_eventControlMock_eventControlMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
+    computeExecutionTime = None(),
+    domain = None())
+
+  val rts_actuatorsMock_actuatorsMockThread_timingProperties: ThreadTimingProperties = ThreadTimingProperties(
     computeExecutionTime = None(),
     domain = None())
 
@@ -90,21 +90,21 @@ object Schedulers {
 
   // staticSchedule represents the component dispatch order
   val staticSchedule: DScheduleSpec = DScheduleSpec(0, 0, DSchedule(ISZ(
-    Slot(Arch.rts_actuatorsMock_actuatorsMockThread.id, maxExecutionTime),
-    Slot(Arch.rts_eventControlMock_eventControlMockThread.id, maxExecutionTime),
-    Slot(Arch.rts_instrumentationMock_instrumentationMockThread.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic.id, maxExecutionTime),
     Slot(Arch.rts_actuationSubsystem_actuationUnit1_pressureLogic_coincidenceLogic.id, maxExecutionTime),
-    Slot(Arch.rts_actuationSubsystem_actuationUnit1_temperatureLogic_coincidenceLogic.id, maxExecutionTime)
+    Slot(Arch.rts_actuationSubsystem_actuationUnit1_saturationLogic_coincidenceLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit1_tempPressureTripOut_orLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit2_temperatureLogic_coincidenceLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit2_pressureLogic_coincidenceLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit2_saturationLogic_coincidenceLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_actuationUnit2_tempPressureTripOut_orLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_tempPressureActuatorUnit_actuateTempPressureActuator_orLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator_actuator.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_saturationActuatorUnit_actuateSaturationActuator_orLogic.id, maxExecutionTime),
+    Slot(Arch.rts_actuationSubsystem_saturationActuatorUnit_saturationActuator_actuator.id, maxExecutionTime),
+    Slot(Arch.rts_instrumentationMock_instrumentationMockThread.id, maxExecutionTime),
+    Slot(Arch.rts_eventControlMock_eventControlMockThread.id, maxExecutionTime),
+    Slot(Arch.rts_actuatorsMock_actuatorsMockThread.id, maxExecutionTime)
   )))
 
 
