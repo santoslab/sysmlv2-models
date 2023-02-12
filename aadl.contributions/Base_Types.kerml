@@ -1,4 +1,4 @@
-package Base_Types {
+library package Base_Types {
 	
 	import AADL_Properties::*;
 	import AADL_Data_Model::*;

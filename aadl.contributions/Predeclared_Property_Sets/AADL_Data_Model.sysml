@@ -1,4 +1,4 @@
-package AADL_Data_Model {
+library package AADL_Data_Model {
 	
 	attribute def Range {
 		attribute low: ScalarValues::Integer;

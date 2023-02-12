@@ -1,4 +1,4 @@
-package AADL_Definitions {
+library package AADL_Definitions {
 
 	abstract part def System;
 

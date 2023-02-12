@@ -1,5 +1,5 @@
 //Stores definitions of AADL properties
-package AADL_Properties {
+library package AADL_Properties {
 
 	import ISQ::*;
 	import SIPrefixes::*;

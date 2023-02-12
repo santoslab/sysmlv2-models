@@ -1,4 +1,4 @@
-package AADL_Thread_Properties {
+library package AADL_Thread_Properties {
 	
 	// Defines the type for Dispatch_Protocol as an enum with two potential values
 	enum def Supported_Dispatch_Protocols {
