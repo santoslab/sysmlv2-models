@@ -10,56 +10,56 @@ library package Base_Types {
 
     datatype Integer_8 :> Integer {
     	@Properties {
-    		Data_Size = 8 [bit];
+    		Data_Size = 8;
     		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_16 :> Integer {
     	@Properties {
-    		Data_Size = 16 [bit];
+    		Data_Size = 16;
     		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_32 :> Integer {
     	@Properties {
-    		Data_Size = 32 [bit];
+    		Data_Size = 32;
     		Number_Representation = Signed;
     	}
     }
     
     datatype Integer_64 :> Integer {
     	@Properties {
-    		Data_Size = 64 [bit];
+    		Data_Size = 64;
     		Number_Representation = Signed;
     	}
     }
 
     datatype Unsigned_8 :> Integer {
     	@Properties {
-    		Data_Size = 8 [bit];
+    		Data_Size = 8;
     		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_16 :> Integer {
     	@Properties {
-    		Data_Size = 16 [bit];
+    		Data_Size = 16;
     		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_32 :> Integer {
     	@Properties {
-    		Data_Size = 32 [bit];
+    		Data_Size = 32;
     		Number_Representation = Unsigned;
     	}
     }
     
     datatype Unsigned_64 :> Integer {
     	@Properties {
-    		Data_Size = 64 [bit];
+    		Data_Size = 64;
     		Number_Representation = Unsigned;
     	}
     }
@@ -80,14 +80,14 @@ library package Base_Types {
     
     datatype Float_32 :> Float {
     	@Properties {
-    		Data_Size = 32 [bit];
+    		Data_Size = 32;
     		IEEE754_Precision = Simple;
     	}
     }
     
     datatype Float_64 :> Float {
     	@Properties {
-    		Data_Size = 64 [bit];
+    		Data_Size = 64;
     		IEEE754_Precision = Double;
     	}
     }
