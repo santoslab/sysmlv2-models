@@ -59,7 +59,7 @@ object Explorer {
 
   // helper method to define initial state value
   def initialScheduleState(): ScheduleState = {
-    ScheduleState(0,0)
+    return ScheduleState(0,0)
   }
 
   // method to initialize schedule state
@@ -91,7 +91,7 @@ object Explorer {
     // bridge.entryPoints.compute()  -- debug with Robby
     // Art.bridges(bridgeId).asInstanceOf[MSome[Bridge]].value.entryPoints.compute()
     if(ArtNative.shouldDispatch(bridgeId)) {
-      Art.bridges(bridgeId).get.entryPoints.compute()
+      Art.bridges(bridgeId.toZ).get.entryPoints.compute()
     }
   }
 

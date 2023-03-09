@@ -23,21 +23,15 @@ import tc.TempControlAadl.{TempControl_tcp_tempControl => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_currentTemp,
-              ports_tempChanged,
-              ports_fanCmd,
-              ports_fanAck,
-              ports_setPoint),
+    dataIns = ISZ[art.UPort](ports_currentTemp),
 
-    dataIns = ISZ(ports_currentTemp),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = ISZ(),
+    eventIns = ISZ[art.UPort](ports_tempChanged,
+                              ports_fanAck,
+                              ports_setPoint),
 
-    eventIns = ISZ(ports_tempChanged,
-                   ports_fanAck,
-                   ports_setPoint),
-
-    eventOuts = ISZ(ports_fanCmd)
+    eventOuts = ISZ[art.UPort](ports_fanCmd)
   )
 
   val initialization_api : TempControl_Initialization_Api = {
@@ -98,15 +92,15 @@ object TempControl_tcp_tempControl_Bridge {
     initialization_api: TempControl_Initialization_Api,
     operational_api: TempControl_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(ports_currentTemp_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(ports_currentTemp_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ(ports_tempChanged_Id,
-                                              ports_fanAck_Id,
-                                              ports_setPoint_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(ports_tempChanged_Id,
+                                             ports_fanAck_Id,
+                                             ports_setPoint_Id)
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_fanCmd_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(ports_fanCmd_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempControl_Initialization_Api): Unit = {}

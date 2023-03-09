@@ -2,11 +2,12 @@
 package art.scheduling.static
 
 import org.sireum._
+import art.Art
 import art.scheduling.Scheduler
 import art.scheduling.static.Schedule.DScheduleSpec
 
 
-@record class StaticScheduler(bridges: ISZ[art.Bridge],
+@record class StaticScheduler(bridges: IS[Art.BridgeId, art.Bridge],
                               staticSchedule: DScheduleSpec) extends Scheduler {
 
   override def initialize(): Unit = {

@@ -9,16 +9,16 @@ object StateObserver {
 
 
   def observeInPortValue(bridgeId: Art.BridgeId, portId: Art.PortId): Option[DataContent] = {
-    Art.observeInPortValue(portId)
+    return Art.observeInPortValue(portId)
   }
 
   def observeOutPortValue(bridgeId: Art.BridgeId, portId: Art.PortId): Option[DataContent] = {
-    Art.observeOutPortVariable(portId)
+    return Art.observeOutPortVariable(portId)
   }
 
-  def observeInPortValues(bridgeId: Art.BridgeId): ISZ[(String,Option[DataContent])] = {
-    val bridge = Art.bridges(bridgeId).get
-    var portValues : ISZ[(String,Option[DataContent])] = ISZ()
+  def observeInPortValues(bridgeId: Art.BridgeId): ISZ[(String, Option[DataContent])] = {
+    val bridge = Art.bridges(bridgeId.toZ).get
+    var portValues: ISZ[(String, Option[DataContent])] = ISZ()
 
     for (port <- bridge.ports.dataIns) {
       portValues = portValues :+ ((port.name, Art.observeInPortValue(port.id)))
@@ -30,9 +30,9 @@ object StateObserver {
     return portValues
   }
 
-  def observeOutPortValues(bridgeId: Art.BridgeId): ISZ[(String,Option[DataContent])] = {
-    val bridge = Art.bridges(bridgeId).get
-    var portValues : ISZ[(String,Option[DataContent])] = ISZ()
+  def observeOutPortValues(bridgeId: Art.BridgeId): ISZ[(String, Option[DataContent])] = {
+    val bridge = Art.bridges(bridgeId.toZ).get
+    var portValues: ISZ[(String, Option[DataContent])] = ISZ()
 
     for (port <- bridge.ports.dataOuts) {
       portValues = portValues :+ ((port.name, Art.observeOutPortVariable(port.id)))
@@ -44,13 +44,13 @@ object StateObserver {
     return portValues
   }
 
-  def observeInPortValuesByNickName(threadNickName: String): ISZ[(String,Option[DataContent])] = {
+  def observeInPortValuesByNickName(threadNickName: String): ISZ[(String, Option[DataContent])] = {
     halt("TODO")
     //val bridgeId = art.StaticScheduling.threadNickNames.get(threadNickName).get // ToDo: fix error handling
     //return observeInPortValues(bridgeId)
   }
 
-  def observeOutPortValuesByNickName(threadNickName: String): ISZ[(String,Option[DataContent])] = {
+  def observeOutPortValuesByNickName(threadNickName: String): ISZ[(String, Option[DataContent])] = {
     halt("TODO")
     //val bridgeId = art.StaticScheduling.threadNickNames.get(threadNickName).get // ToDo: fix error handling
     //return observeOutPortValues(bridgeId)
@@ -60,7 +60,7 @@ object StateObserver {
   // State Observations (primary methods for interpreting debug commands)
   //=======================================================================
 
-  def generatePortContentsInputsCurrent() : String = {
+  def generatePortContentsInputsCurrent(): String = {
     val bridgeId = Schedule.getBridgeIdFromSlotNumber(Explorer.scheduleState.slotNum)
     val inPortInfo = observeInPortValues(bridgeId)
     val result =
@@ -73,9 +73,9 @@ object StateObserver {
     return result
   }
 
-  def generatePortContentsOutputsCurrent() : String = {
+  def generatePortContentsOutputsCurrent(): String = {
     val previousStateOpt: Option[Explorer.ScheduleState] =
-      Explorer.previousState(Explorer.scheduleState,Schedule.dScheduleSpec)
+      Explorer.previousState(Explorer.scheduleState, Schedule.dScheduleSpec)
 
     previousStateOpt match {
       case Some(previousState) => {
@@ -96,16 +96,17 @@ object StateObserver {
     }
   }
 
-  def formatPortInfo(portVals: ISZ[(String,Option[DataContent])]): String = {
+  def formatPortInfo(portVals: ISZ[(String, Option[DataContent])]): String = {
     var result: String = "" // ToDo: Ask Robby if I can do this with a repeating template
     for (e <- portVals) {
-      result = st"""$result
-                   |${e._1} = ${e._2}""".render  // how do I put in new line?
+      result =
+        st"""$result
+            |${e._1} = ${e._2}""".render // how do I put in new line?
     }
     return result
   }
 
-  def generatePortContents(bridgeId: Z) : String = {
+  def generatePortContents(bridgeId: Art.BridgeId): String = {
     val inPortInfo = observeInPortValues(bridgeId)
     val outPortInfo = observeOutPortValues(bridgeId)
     val result =
@@ -122,7 +123,7 @@ object StateObserver {
     return result
   }
 
-  def generatePortContentsByNickName(threadNickName: String) : String = {
+  def generatePortContentsByNickName(threadNickName: String): String = {
     halt("TODO")
     //val bridgeId = art.StaticScheduling.threadNickNames.get(threadNickName).get // ToDo: fix error handling
     //return generatePortContents(bridgeId)

@@ -35,27 +35,26 @@ object ArtDebug_Ext {
   }
 
   def injectPort(bridgeId: Art.BridgeId, port: Art.PortId, data: DataContent): Unit = {
-    assert(z"0" <= bridgeId && bridgeId < Art.maxComponents && Art.bridges(bridgeId).nonEmpty)
 
-    val bridge = Art.bridges(bridgeId).get
-    assert(bridge.ports.all.elements.map(_.id).contains(port))
+    val bridge = Art.bridges(bridgeId.toZ).get
 
-    if(bridge.ports.dataOuts.elements.map(_.id).contains(port) ||
+    if (bridge.ports.dataOuts.elements.map(_.id).contains(port) ||
       bridge.ports.eventOuts.elements.map(_.id).contains(port)) {
 
       ArtNative.logDebug(Art.logTitle, s"Injecting from port ${Art.ports(port).get.name}")
 
       ArtNative.putValue(port, data)
+
       ArtNative.sendOutput(bridge.ports.eventOuts.map(_.id), bridge.ports.dataOuts.map(_.id))
     } else {
       ArtNative.logDebug(Art.logTitle, s"Injecting to port ${Art.ports(port).get.name}")
 
       // right now, there is no difference between treatment of data and event ports, but keep the logic
       // separate for further refactoring
-      if(bridge.ports.dataIns.elements.map(_.id).contains(port)) {
-        ArtNative_Ext.inInfrastructurePorts(port) = ArtMessage(data)
+      if (bridge.ports.dataIns.elements.map(_.id).contains(port)) {
+        ArtNative_Ext.inInfrastructurePorts(port.toZ) = ArtMessage(data)
       } else {
-        ArtNative_Ext.inInfrastructurePorts(port) = ArtMessage(data)
+        ArtNative_Ext.inInfrastructurePorts(port.toZ) = ArtMessage(data)
       }
     }
   }

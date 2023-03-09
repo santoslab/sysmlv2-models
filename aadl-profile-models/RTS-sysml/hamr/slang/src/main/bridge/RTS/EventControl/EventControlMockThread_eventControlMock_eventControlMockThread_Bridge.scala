@@ -20,17 +20,14 @@ import RTS.EventControl.{EventControlMockThread_eventControlMock_eventControlMoc
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_manualActuatorInput1,
-              ports_manualActuatorInput2),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = ISZ(),
+    dataOuts = ISZ[art.UPort](ports_manualActuatorInput1,
+                              ports_manualActuatorInput2),
 
-    dataOuts = ISZ(ports_manualActuatorInput1,
-                   ports_manualActuatorInput2),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : EventControlMockThread_Initialization_Api = {
@@ -79,14 +76,14 @@ object EventControlMockThread_eventControlMock_eventControlMockThread_Bridge {
     initialization_api: EventControlMockThread_Initialization_Api,
     operational_api: EventControlMockThread_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_manualActuatorInput1_Id,
-                                              ports_manualActuatorInput2_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(ports_manualActuatorInput1_Id,
+                                             ports_manualActuatorInput2_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: EventControlMockThread_Initialization_Api): Unit = {}

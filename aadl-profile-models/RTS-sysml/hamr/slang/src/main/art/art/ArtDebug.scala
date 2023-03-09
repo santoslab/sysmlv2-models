@@ -19,6 +19,7 @@ import org.sireum._
 
   // lifecycle information
   def start(time: Art.Time): Unit
+
   def stop(time: Art.Time): Unit
 
   // communication information
