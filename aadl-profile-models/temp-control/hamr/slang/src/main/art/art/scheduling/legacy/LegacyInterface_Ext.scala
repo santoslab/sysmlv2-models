@@ -7,7 +7,7 @@ import org.sireum._
 object LegacyInterface_Ext {
   val slowdown: Z = 1
 
-  def computePhase(bridges: ISZ[art.Bridge]): Unit = {
+  def computePhase(bridges: IS[Art.BridgeId, art.Bridge]): Unit = {
     var terminated = false
     var numTerminated: Z = 0
 
@@ -32,7 +32,7 @@ object LegacyInterface_Ext {
               }
             }
             catch {
-              case x : Throwable =>
+              case x: Throwable =>
                 x.printStackTrace()
                 terminated = true
             }

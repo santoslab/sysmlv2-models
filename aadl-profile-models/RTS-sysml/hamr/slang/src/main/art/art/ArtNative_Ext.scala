@@ -7,27 +7,26 @@ import org.sireum.S64._
 import scala.collection.mutable.{Map => MMap}
 
 object ArtMessage {
-  val UNSET_PORT: Art.PortId = -1
   val UNSET_TIME: Art.Time = s64"-1"
 }
 
-case class ArtMessage (data: DataContent,
+case class ArtMessage(data: DataContent,
 
-                       var srcPortId: Art.PortId = ArtMessage.UNSET_PORT,
-                       var dstPortId: Art.PortId = ArtMessage.UNSET_PORT,
+                      var srcPortId: Option[Art.PortId] = None(),
+                      var dstPortId: Option[Art.PortId] = None(),
 
-                       // when putValue was called by producer
-                       var putValueTimestamp: Art.Time = ArtMessage.UNSET_TIME,
+                      // when putValue was called by producer
+                      var putValueTimestamp: Art.Time = ArtMessage.UNSET_TIME,
 
-                       // when sendOutput transferred message from out port var of producer
-                       var sendOutputTimestamp: Art.Time = ArtMessage.UNSET_TIME,
+                      // when sendOutput transferred message from out port var of producer
+                      var sendOutputTimestamp: Art.Time = ArtMessage.UNSET_TIME,
 
-                       // when message arrived via transport layer
-                       var dstArrivalTimestamp: Art.Time = ArtMessage.UNSET_TIME,
+                      // when message arrived via transport layer
+                      var dstArrivalTimestamp: Art.Time = ArtMessage.UNSET_TIME,
 
-                       // when receiveInput transferred message to in port vars of consumer
-                       var receiveInputTimestamp: Art.Time = ArtMessage.UNSET_TIME
-                      )
+                      // when receiveInput transferred message to in port vars of consumer
+                      var receiveInputTimestamp: Art.Time = ArtMessage.UNSET_TIME
+                     )
 
 object ArtNative_Ext {
   val noTime: Art.Time = s64"0"
@@ -50,14 +49,14 @@ object ArtNative_Ext {
   //    We should study the Arch description to assess (more systematically)
   //    what types of helpers are needed and where they would go.
   /*
-  var activeBridges: ISZ[Art.BridgeId] = ISZ()
+  var activeBridges: IS[Art.BridgeId, Art.BridgeId] = ISZ()
   def setUpArchitecture() : Unit = {
     for(e <- Art.bridges.elements if(e.nonEmpty)) {
       activeBridges = activeBridges :+ e.get.id
     }
   }
   def tearDownArchitecture() : Unit = {
-    activeBridges = ISZ()
+    activeBridges = IS[Art.BridgeId, Art.BridgeId]()
   }
   */
 
@@ -80,10 +79,10 @@ object ArtNative_Ext {
   //   S y s t e m     S t a t e
   //================================================================
 
-  val inInfrastructurePorts: MMap[Art.PortId, ArtMessage] = concMap()
-  val outInfrastructurePorts: MMap[Art.PortId, ArtMessage] = concMap()
-  val inPortVariables: MMap[Art.PortId, ArtMessage] = concMap()
-  val outPortVariables: MMap[Art.PortId, ArtMessage] = concMap()
+  val inInfrastructurePorts: MMap[Z, ArtMessage] = concMap()
+  val outInfrastructurePorts: MMap[Z, ArtMessage] = concMap()
+  val inPortVariables: MMap[Z, ArtMessage] = concMap()
+  val outPortVariables: MMap[Z, ArtMessage] = concMap()
 
 
   // Initializes system state in preparation for execution of initialize, compute, and finalize phases
@@ -121,19 +120,25 @@ object ArtNative_Ext {
   // JH: Refactored -- renamed port data structures
   // TODO -- Consider whether changing the value from ArtMessage to Art.DataContent should happen here (instead of in getValue)
   def receiveInput(eventPortIds: ISZ[Art.PortId], dataPortIds: ISZ[Art.PortId]): Unit = {
+    // remove any old events from previous dispatch
+    for (portId <- eventPortIds if inPortVariables.contains(portId.toZ)) {
+      inPortVariables -= portId.toZ
+    }
+
+    // transfer received data/events from the infrastructure ports to the port variables
     for (portId <- eventPortIds) {
-      inInfrastructurePorts.get(portId) match {
+      inInfrastructurePorts.get(portId.toZ) match {
         case scala.Some(data) =>
-          inInfrastructurePorts -= portId // dequeue from infrastructure port
-          inPortVariables(portId) = data // when we shift to queue size greater than 1, we would enqueue here
+          inInfrastructurePorts -= portId.toZ // dequeue from infrastructure port
+          inPortVariables(portId.toZ) = data // when we shift to queue size greater than 1, we would enqueue here
         case _ =>
       }
     }
     for (portId <- dataPortIds) {
-      inInfrastructurePorts.get(portId) match {
+      inInfrastructurePorts.get(portId.toZ) match {
         case scala.Some(data) =>
           // for data ports, we don't dequeue from infrastastructure ports
-          inPortVariables(portId) = data
+          inPortVariables(portId.toZ) = data
         case _ =>
       }
     }
@@ -141,7 +146,7 @@ object ArtNative_Ext {
 
   def putValue(portId: Art.PortId, data: DataContent): Unit = {
     // wrap the Art.DataContent value into an ArtMessage with time stamps
-    outPortVariables(portId) = ArtMessage(data = data, srcPortId = portId, putValueTimestamp = Art.time())
+    outPortVariables(portId.toZ) = ArtMessage(data = data, srcPortId = Some(portId), putValueTimestamp = Art.time())
   }
 
   def getValue(portId: Art.PortId): Option[DataContent] = {
@@ -149,7 +154,7 @@ object ArtNative_Ext {
     // out the actual payload value (v.data) from ArtMessage (which includes timestamps, etc.)
     // to Art.DataContent (the "top"/union data type supported by Art.
     // The projecting preserves the option of structure of ArtMessage value.
-    val data = inPortVariables.get(portId) match {
+    val data = inPortVariables.get(portId.toZ) match {
       case scala.Some(v) => org.sireum.Some(v.data)
       case _ => org.sireum.None[DataContent]()
     }
@@ -164,24 +169,24 @@ object ArtNative_Ext {
   //  until that refactoring is made.
   def sendOutput(eventPortIds: ISZ[Art.PortId], dataPortIds: ISZ[Art.PortId]): Unit = { // SEND_OUTPUT
     for (srcPortId <- eventPortIds ++ dataPortIds) {
-      outPortVariables.get(srcPortId) match {
+      outPortVariables.get(srcPortId.toZ) match {
         case scala.Some(msg) =>
           // move payload from out port port variables to the out infrastructure ports
-          outInfrastructurePorts(srcPortId) = outPortVariables(srcPortId)
-          outPortVariables -= srcPortId
+          outInfrastructurePorts(srcPortId.toZ) = outPortVariables(srcPortId.toZ)
+          outPortVariables -= srcPortId.toZ
 
           // simulate sending msg via transport middleware
-          for(dstPortId <- Art.connections(srcPortId).elements) {
+          for (dstPortId <- Art.connections(srcPortId).elements) {
 
-            val _msg = msg.copy(dstPortId = dstPortId, sendOutputTimestamp = Art.time())
+            val _msg = msg.copy(dstPortId = Some(dstPortId), sendOutputTimestamp = Art.time())
 
             Art.port(dstPortId).mode match {
               // right now, there is no difference in the logic between data and event ports,
               // but keep the code separate for future refactorings
               case PortMode.DataIn | PortMode.DataOut =>
-                inInfrastructurePorts(dstPortId) = _msg
+                inInfrastructurePorts(dstPortId.toZ) = _msg
               case PortMode.EventIn | PortMode.EventOut =>
-                inInfrastructurePorts(dstPortId) = _msg
+                inInfrastructurePorts(dstPortId.toZ) = _msg
             }
 
             _msg.dstArrivalTimestamp = Art.time()
@@ -190,7 +195,7 @@ object ArtNative_Ext {
           }
 
           // payload delivered so remove it from out infrastructure port
-          outInfrastructurePorts -= srcPortId
+          outInfrastructurePorts -= srcPortId.toZ
         case _ =>
       }
     }
@@ -206,16 +211,16 @@ object ArtNative_Ext {
     // val b = Art.bridge(bridgeId) -- refactor
     // ToDo: the computation of input/output port ids should be helper functions in Bridge
     // compute inPortIds
-    val inPortIds = Art.bridges(bridgeId).get.ports.eventIns.elements.map(_.id) ++ Art.bridges(bridgeId).get.ports.dataIns.elements.map(_.id)
+    val inPortIds = Art.bridges(bridgeId.toZ).get.ports.eventIns.elements.map(_.id) ++ Art.bridges(bridgeId.toZ).get.ports.dataIns.elements.map(_.id)
     // iterate through inPortIds and clear the value of each corresponding port variable
     for (portId <- inPortIds) {
-      inPortVariables -= portId;
+      inPortVariables -= portId.toZ;
     }
     // compute outPortIds
-    val outPortIds = Art.bridges(bridgeId).get.ports.eventOuts.elements.map(_.id) ++ Art.bridges(bridgeId).get.ports.dataOuts.elements.map(_.id)
+    val outPortIds = Art.bridges(bridgeId.toZ).get.ports.eventOuts.elements.map(_.id) ++ Art.bridges(bridgeId.toZ).get.ports.dataOuts.elements.map(_.id)
     // iterate through outPortIds and clear the value of each corresponding port variable
     for (portId <- outPortIds) {
-      outPortVariables -= portId;
+      outPortVariables -= portId.toZ
     }
   }
 
@@ -237,40 +242,40 @@ object ArtNative_Ext {
 
   // JH: Refactor to match logic in semantics, group with dispatch status
   def shouldDispatch(bridgeId: Art.BridgeId): B = {
-    assert(Art.bridges(bridgeId).nonEmpty, s"Bridge ${bridgeId} does not exist")
+    assert(Art.bridges(bridgeId.toZ).nonEmpty, s"Bridge ${bridgeId} does not exist")
 
-    Art.bridges(bridgeId).get.dispatchProtocol match {
+    Art.bridges(bridgeId.toZ).get.dispatchProtocol match {
       case DispatchPropertyProtocol.Periodic(_) => return T
       case DispatchPropertyProtocol.Sporadic(minRate) =>
-        return Art.bridges(bridgeId).get.ports.eventIns.elements.exists(
-          port => inInfrastructurePorts.contains(port.id))
+        return Art.bridges(bridgeId.toZ).get.ports.eventIns.elements.exists(
+          port => inInfrastructurePorts.contains(port.id.toZ))
     }
   }
 
   // JH: Refactored -- renamed port data structures
   //     ToDo: add comments justifying various sections of the logic by reference to standard clauses
   def dispatchStatus(bridgeId: Art.BridgeId): DispatchStatus = {
-    val ret: DispatchStatus = Art.bridges(bridgeId).get.dispatchProtocol match {
+    val ret: DispatchStatus = Art.bridges(bridgeId.toZ).get.dispatchProtocol match {
       case Periodic(_) => TimeTriggered()
       case Sporadic(_) =>
         // get ids for non-empty input event ports
-        val portIds = ISZ[Art.PortId](Art.bridges(bridgeId).get.ports.eventIns.elements.map(_.id).filter(inInfrastructurePorts.get(_).nonEmpty): _*)
-        val urgentFifo = ops.ISZOps(portIds.map(Art.port(_))).sortWith { // reverse sort
+        val portIds = ISZ[Art.PortId](Art.bridges(bridgeId.toZ).get.ports.eventIns.map((u: UPort) => u.id).elements.filter((i: Art.PortId) => inInfrastructurePorts.get(i.toZ).nonEmpty): _*)
+        val urgentFifo: Seq[Art.PortId] = portIds.map((pid: Art.PortId) => Art.port(pid)).elements.sortWith { // reverse sort
           // sorting function to make prioritized sequence of event port ids
           //   compare p1 to p2  (p1 represents the port to process earlier, i.e., should have priority)
-          case (p1: UrgentPort[_], p2: UrgentPort[_]) =>
+          case (p1: UrgentPort[_], p2: UrgentPort[_]) => Z
             // if p1 has a strictly less urgency it comes after p2
             if (p1.urgency < p2.urgency) F
             // if p1 has a strictly greater urgency, it comes before p2
             else if (p1.urgency > p2.urgency) T
             // if p1 and p2 have the same urgency, the ordering is determined by arrival timestamps
-            else inInfrastructurePorts(p1.id).dstArrivalTimestamp < inInfrastructurePorts(p2.id).dstArrivalTimestamp
+            else inInfrastructurePorts(p1.id.toZ).dstArrivalTimestamp < inInfrastructurePorts(p2.id.toZ).dstArrivalTimestamp
           case (_: UrgentPort[_], _: Port[_]) => T // urgent ports take precedence
           case (_: Port[_], _: UrgentPort[_]) => F // urgent ports take precedence
           case (p1: Port[_], p2: Port[_]) =>
-            inInfrastructurePorts(p1.id).dstArrivalTimestamp < inInfrastructurePorts(p2.id).dstArrivalTimestamp
+            inInfrastructurePorts(p1.id.toZ).dstArrivalTimestamp < inInfrastructurePorts(p2.id.toZ).dstArrivalTimestamp
         }.map(_.id)
-        EventTriggered(urgentFifo)
+        EventTriggered(ISZ[Art.PortId](urgentFifo: _*))
     }
     return ret
   }
@@ -337,16 +342,16 @@ object ArtNative_Ext {
     logInfo(Art.logTitle, s"Initialized bridge: ${bridge.name}")
   }
 
- /**
-  * Executes the application code in the Initialize Entry Point for the component (identified
-  * by given bridge) for the purposes of testing.  This is achieved by
-  * calling the testInitialise() method on given bridge.
-  *
-  * Precondition: initTest() has been called prior.
-  *
-  * Unlike [[Art.run()]], this method does NOT wrap compute calls in a try-catch block.
-  * This is to ensure no exceptions are overlooked during testing.
-  */
+  /**
+   * Executes the application code in the Initialize Entry Point for the component (identified
+   * by given bridge) for the purposes of testing.  This is achieved by
+   * calling the testInitialise() method on given bridge.
+   *
+   * Precondition: initTest() has been called prior.
+   *
+   * Unlike [[Art.run()]], this method does NOT wrap compute calls in a try-catch block.
+   * This is to ensure no exceptions are overlooked during testing.
+   */
   def testInitialise(bridge: Bridge): Unit = {
     bridge.entryPoints.testInitialise()
   }
@@ -415,9 +420,9 @@ object ArtNative_Ext {
     //   Art.sendOutput -> ArtNative.sendOutput -> ArtNative_Ext.sendOutput
     //JH added:
     for (srcPortId <- eventPortIds ++ dataPortIds) {
-      outPortVariables.get(srcPortId) match {
+      outPortVariables.get(srcPortId.toZ) match {
         case scala.Some(msg) =>
-          outInfrastructurePorts(srcPortId) = outPortVariables(srcPortId)
+          outInfrastructurePorts(srcPortId.toZ) = outPortVariables(srcPortId.toZ)
         case _ =>
       }
     }
@@ -443,14 +448,14 @@ object ArtNative_Ext {
    */
   def insertInPortValue(dstPortId: Art.PortId, data: DataContent): Unit = {
     // note: that could would be changed when we refactor to support event queues of size > 1
-    val artMessage = ArtMessage(data = data, dstPortId = dstPortId, dstArrivalTimestamp = Art.time())
+    val artMessage = ArtMessage(data = data, dstPortId = Some(dstPortId), dstArrivalTimestamp = Art.time())
     // note: right now, there is no difference in the logic between data and event ports, but keep the
     // logic separate for future refactoring
     Art.port(dstPortId).mode match {
       case PortMode.DataIn | PortMode.DataOut =>
-        inInfrastructurePorts(dstPortId) = artMessage
+        inInfrastructurePorts(dstPortId.toZ) = artMessage
       case PortMode.EventIn | PortMode.EventOut =>
-        inInfrastructurePorts(dstPortId) = artMessage
+        inInfrastructurePorts(dstPortId.toZ) = artMessage
     }
   }
 
@@ -462,7 +467,7 @@ object ArtNative_Ext {
    */
   def observeOutPortValue(portId: Art.PortId): Option[DataContent] = {
     // note: would be changed when we refactor to support event queues of size > 1
-    outPortVariables.get(portId) match {
+    outPortVariables.get(portId.toZ) match {
       case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
       case scala.None => org.sireum.None[DataContent]()
     }
@@ -480,12 +485,12 @@ object ArtNative_Ext {
     // between how data ports are treated, and how event/event data ports are treated.
     Art.port(portId).mode match {
       case PortMode.DataIn =>
-        inInfrastructurePorts.get(portId) match {
+        inInfrastructurePorts.get(portId.toZ) match {
           case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
           case scala.None => org.sireum.None[DataContent]()
         }
       case PortMode.EventIn =>
-        inInfrastructurePorts.get(portId) match {
+        inInfrastructurePorts.get(portId.toZ) match {
           case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
           case scala.None => org.sireum.None[DataContent]()
         }
@@ -501,12 +506,12 @@ object ArtNative_Ext {
     // between how data ports are treated, and how event/event data ports are treated.
     Art.port(portId).mode match {
       case PortMode.DataIn =>
-        inPortVariables.get(portId) match {
+        inPortVariables.get(portId.toZ) match {
           case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
           case scala.None => org.sireum.None[DataContent]()
         }
       case PortMode.EventIn =>
-        inPortVariables.get(portId) match {
+        inPortVariables.get(portId.toZ) match {
           case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
           case scala.None => org.sireum.None[DataContent]()
         }
@@ -519,7 +524,7 @@ object ArtNative_Ext {
 
   def observeOutPortVariable(portId: Art.PortId): Option[DataContent] = {
     // note: that could would be changed when we refactor to support event queues of size > 1
-    outPortVariables.get(portId) match {
+    outPortVariables.get(portId.toZ) match {
       case scala.Some(value: ArtMessage) => org.sireum.Some[DataContent](value.data)
       case scala.None => org.sireum.None[DataContent]()
     }

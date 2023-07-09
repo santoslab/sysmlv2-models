@@ -1656,12 +1656,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -1689,10 +1689,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -2819,12 +2819,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -2852,10 +2852,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -3982,12 +3982,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -4015,10 +4015,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -5033,12 +5033,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -5066,10 +5066,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -8641,12 +8641,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -8674,10 +8674,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -9804,12 +9804,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -9837,10 +9837,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -10967,12 +10967,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -11000,10 +11000,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -12018,12 +12018,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -12051,10 +12051,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -15234,12 +15234,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -15267,10 +15267,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -15999,12 +15999,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -16032,10 +16032,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -17642,12 +17642,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -17675,10 +17675,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -18407,12 +18407,12 @@
                                   "type" : "Some",
                                   "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                                 },
-                                "beginLine" : 10,
+                                "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 10,
-                                "endColumn" : 62,
-                                "offset" : 237,
-                                "length" : 59
+                                "endLine" : 12,
+                                "endColumn" : 4,
+                                "offset" : 107,
+                                "length" : 444
                               }
                             }
                           },
@@ -18440,10 +18440,10 @@
                                 },
                                 "beginLine" : 5,
                                 "beginColumn" : 3,
-                                "endLine" : 5,
-                                "endColumn" : 44,
-                                "offset" : 96,
-                                "length" : 41
+                                "endLine" : 18,
+                                "endColumn" : 4,
+                                "offset" : 81,
+                                "length" : 744
                               }
                             }
                           },
@@ -25669,12 +25669,12 @@
                           "type" : "Some",
                           "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                         },
-                        "beginLine" : 10,
+                        "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 10,
-                        "endColumn" : 62,
-                        "offset" : 237,
-                        "length" : 59
+                        "endLine" : 12,
+                        "endColumn" : 4,
+                        "offset" : 107,
+                        "length" : 444
                       }
                     }
                   },
@@ -25702,10 +25702,10 @@
                         },
                         "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 5,
-                        "endColumn" : 44,
-                        "offset" : 96,
-                        "length" : 41
+                        "endLine" : 18,
+                        "endColumn" : 4,
+                        "offset" : 81,
+                        "length" : 744
                       }
                     }
                   },
@@ -29381,12 +29381,12 @@
                           "type" : "Some",
                           "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                         },
-                        "beginLine" : 10,
+                        "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 10,
-                        "endColumn" : 62,
-                        "offset" : 237,
-                        "length" : 59
+                        "endLine" : 12,
+                        "endColumn" : 4,
+                        "offset" : 107,
+                        "length" : 444
                       }
                     }
                   },
@@ -29414,10 +29414,10 @@
                         },
                         "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 5,
-                        "endColumn" : 44,
-                        "offset" : 96,
-                        "length" : 41
+                        "endLine" : 18,
+                        "endColumn" : 4,
+                        "offset" : 81,
+                        "length" : 744
                       }
                     }
                   },
@@ -29947,12 +29947,12 @@
                           "type" : "Some",
                           "value" : "\/aadl.contributions\/Predeclared_Property_Sets\/AADL_Thread_Properties.sysml"
                         },
-                        "beginLine" : 10,
+                        "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 10,
-                        "endColumn" : 62,
-                        "offset" : 237,
-                        "length" : 59
+                        "endLine" : 12,
+                        "endColumn" : 4,
+                        "offset" : 107,
+                        "length" : 444
                       }
                     }
                   },
@@ -29980,10 +29980,10 @@
                         },
                         "beginLine" : 5,
                         "beginColumn" : 3,
-                        "endLine" : 5,
-                        "endColumn" : 44,
-                        "offset" : 96,
-                        "length" : 41
+                        "endLine" : 18,
+                        "endColumn" : 4,
+                        "offset" : 81,
+                        "length" : 744
                       }
                     }
                   },

@@ -5,8 +5,8 @@ package art
 import org.sireum._
 
 
-@datatype class ArchitectureDescription(components: ISZ[Bridge],
-                                        connections: ISZ[UConnection]) {
+@datatype class ArchitectureDescription(components: IS[Art.BridgeId, Bridge],
+                                        connections: IS[Art.ConnectionId, UConnection]) {
   @spec val allPorts: ISZ[UPort] = $
 
   @spec def allPortsSpec(i: Z): ISZ[UPort] = $
@@ -113,13 +113,16 @@ object Bridge {
 
     def finalise(): Unit
 
-    def testCompute(): Unit = { println("Default testCompute") }
+    def testCompute(): Unit = {
+      println("Default testCompute")
+    }
 
-    def testInitialise(): Unit = { println("Default testInitialise") }
+    def testInitialise(): Unit = {
+      println("Default testInitialise")
+    }
   }
 
-  @datatype class Ports(all: ISZ[UPort],
-                        dataIns: ISZ[UPort],
+  @datatype class Ports(dataIns: ISZ[UPort],
                         dataOuts: ISZ[UPort],
                         eventIns: ISZ[UPort],
                         eventOuts: ISZ[UPort])

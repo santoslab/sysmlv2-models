@@ -23,22 +23,16 @@ import RTS.Actuation.{CoincidenceLogic_actuationSubsystem_actuationUnit1_pressur
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_channel1,
-              ports_channel2,
-              ports_channel3,
-              ports_channel4,
-              ports_actuate),
+    dataIns = ISZ[art.UPort](ports_channel1,
+                             ports_channel2,
+                             ports_channel3,
+                             ports_channel4),
 
-    dataIns = ISZ(ports_channel1,
-                  ports_channel2,
-                  ports_channel3,
-                  ports_channel4),
+    dataOuts = ISZ[art.UPort](ports_actuate),
 
-    dataOuts = ISZ(ports_actuate),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : CoincidenceLogic_Initialization_Api = {
@@ -99,16 +93,16 @@ object CoincidenceLogic_actuationSubsystem_actuationUnit1_pressureLogic_coincide
     initialization_api: CoincidenceLogic_Initialization_Api,
     operational_api: CoincidenceLogic_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(ports_channel1_Id,
-                                             ports_channel2_Id,
-                                             ports_channel3_Id,
-                                             ports_channel4_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(ports_channel1_Id,
+                                            ports_channel2_Id,
+                                            ports_channel3_Id,
+                                            ports_channel4_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_actuate_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(ports_actuate_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: CoincidenceLogic_Initialization_Api): Unit = {}

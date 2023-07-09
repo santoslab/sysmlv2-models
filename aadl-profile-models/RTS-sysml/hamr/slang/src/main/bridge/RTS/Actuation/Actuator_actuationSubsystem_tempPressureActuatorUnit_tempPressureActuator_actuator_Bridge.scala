@@ -21,18 +21,14 @@ import RTS.Actuation.{Actuator_actuationSubsystem_tempPressureActuatorUnit_tempP
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_input,
-              ports_manualActuatorInput,
-              ports_output),
+    dataIns = ISZ[art.UPort](ports_input,
+                             ports_manualActuatorInput),
 
-    dataIns = ISZ(ports_input,
-                  ports_manualActuatorInput),
+    dataOuts = ISZ[art.UPort](ports_output),
 
-    dataOuts = ISZ(ports_output),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : Actuator_Initialization_Api = {
@@ -85,14 +81,14 @@ object Actuator_actuationSubsystem_tempPressureActuatorUnit_tempPressureActuator
     initialization_api: Actuator_Initialization_Api,
     operational_api: Actuator_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(ports_input_Id,
-                                             ports_manualActuatorInput_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(ports_input_Id,
+                                            ports_manualActuatorInput_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_output_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(ports_output_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Actuator_Initialization_Api): Unit = {}

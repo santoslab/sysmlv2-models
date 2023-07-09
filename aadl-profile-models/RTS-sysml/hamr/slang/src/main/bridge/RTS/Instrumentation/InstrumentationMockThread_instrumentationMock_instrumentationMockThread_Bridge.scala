@@ -42,61 +42,36 @@ import RTS.Instrumentation.{InstrumentationMockThread_instrumentationMock_instru
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_unit1_temperatureLogic_channel1,
-              ports_unit1_temperatureLogic_channel2,
-              ports_unit1_temperatureLogic_channel3,
-              ports_unit1_temperatureLogic_channel4,
-              ports_unit1_pressureLogic_channel1,
-              ports_unit1_pressureLogic_channel2,
-              ports_unit1_pressureLogic_channel3,
-              ports_unit1_pressureLogic_channel4,
-              ports_unit1_saturationLogic_channel1,
-              ports_unit1_saturationLogic_channel2,
-              ports_unit1_saturationLogic_channel3,
-              ports_unit1_saturationLogic_channel4,
-              ports_unit2_temperatureLogic_channel1,
-              ports_unit2_temperatureLogic_channel2,
-              ports_unit2_temperatureLogic_channel3,
-              ports_unit2_temperatureLogic_channel4,
-              ports_unit2_pressureLogic_channel1,
-              ports_unit2_pressureLogic_channel2,
-              ports_unit2_pressureLogic_channel3,
-              ports_unit2_pressureLogic_channel4,
-              ports_unit2_saturationLogic_channel1,
-              ports_unit2_saturationLogic_channel2,
-              ports_unit2_saturationLogic_channel3,
-              ports_unit2_saturationLogic_channel4),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = ISZ(),
+    dataOuts = ISZ[art.UPort](ports_unit1_temperatureLogic_channel1,
+                              ports_unit1_temperatureLogic_channel2,
+                              ports_unit1_temperatureLogic_channel3,
+                              ports_unit1_temperatureLogic_channel4,
+                              ports_unit1_pressureLogic_channel1,
+                              ports_unit1_pressureLogic_channel2,
+                              ports_unit1_pressureLogic_channel3,
+                              ports_unit1_pressureLogic_channel4,
+                              ports_unit1_saturationLogic_channel1,
+                              ports_unit1_saturationLogic_channel2,
+                              ports_unit1_saturationLogic_channel3,
+                              ports_unit1_saturationLogic_channel4,
+                              ports_unit2_temperatureLogic_channel1,
+                              ports_unit2_temperatureLogic_channel2,
+                              ports_unit2_temperatureLogic_channel3,
+                              ports_unit2_temperatureLogic_channel4,
+                              ports_unit2_pressureLogic_channel1,
+                              ports_unit2_pressureLogic_channel2,
+                              ports_unit2_pressureLogic_channel3,
+                              ports_unit2_pressureLogic_channel4,
+                              ports_unit2_saturationLogic_channel1,
+                              ports_unit2_saturationLogic_channel2,
+                              ports_unit2_saturationLogic_channel3,
+                              ports_unit2_saturationLogic_channel4),
 
-    dataOuts = ISZ(ports_unit1_temperatureLogic_channel1,
-                   ports_unit1_temperatureLogic_channel2,
-                   ports_unit1_temperatureLogic_channel3,
-                   ports_unit1_temperatureLogic_channel4,
-                   ports_unit1_pressureLogic_channel1,
-                   ports_unit1_pressureLogic_channel2,
-                   ports_unit1_pressureLogic_channel3,
-                   ports_unit1_pressureLogic_channel4,
-                   ports_unit1_saturationLogic_channel1,
-                   ports_unit1_saturationLogic_channel2,
-                   ports_unit1_saturationLogic_channel3,
-                   ports_unit1_saturationLogic_channel4,
-                   ports_unit2_temperatureLogic_channel1,
-                   ports_unit2_temperatureLogic_channel2,
-                   ports_unit2_temperatureLogic_channel3,
-                   ports_unit2_temperatureLogic_channel4,
-                   ports_unit2_pressureLogic_channel1,
-                   ports_unit2_pressureLogic_channel2,
-                   ports_unit2_pressureLogic_channel3,
-                   ports_unit2_pressureLogic_channel4,
-                   ports_unit2_saturationLogic_channel1,
-                   ports_unit2_saturationLogic_channel2,
-                   ports_unit2_saturationLogic_channel3,
-                   ports_unit2_saturationLogic_channel4),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ()
+    eventOuts = ISZ[art.UPort]()
   )
 
   val initialization_api : InstrumentationMockThread_Initialization_Api = {
@@ -233,36 +208,36 @@ object InstrumentationMockThread_instrumentationMock_instrumentationMockThread_B
     initialization_api: InstrumentationMockThread_Initialization_Api,
     operational_api: InstrumentationMockThread_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_unit1_temperatureLogic_channel1_Id,
-                                              ports_unit1_temperatureLogic_channel2_Id,
-                                              ports_unit1_temperatureLogic_channel3_Id,
-                                              ports_unit1_temperatureLogic_channel4_Id,
-                                              ports_unit1_pressureLogic_channel1_Id,
-                                              ports_unit1_pressureLogic_channel2_Id,
-                                              ports_unit1_pressureLogic_channel3_Id,
-                                              ports_unit1_pressureLogic_channel4_Id,
-                                              ports_unit1_saturationLogic_channel1_Id,
-                                              ports_unit1_saturationLogic_channel2_Id,
-                                              ports_unit1_saturationLogic_channel3_Id,
-                                              ports_unit1_saturationLogic_channel4_Id,
-                                              ports_unit2_temperatureLogic_channel1_Id,
-                                              ports_unit2_temperatureLogic_channel2_Id,
-                                              ports_unit2_temperatureLogic_channel3_Id,
-                                              ports_unit2_temperatureLogic_channel4_Id,
-                                              ports_unit2_pressureLogic_channel1_Id,
-                                              ports_unit2_pressureLogic_channel2_Id,
-                                              ports_unit2_pressureLogic_channel3_Id,
-                                              ports_unit2_pressureLogic_channel4_Id,
-                                              ports_unit2_saturationLogic_channel1_Id,
-                                              ports_unit2_saturationLogic_channel2_Id,
-                                              ports_unit2_saturationLogic_channel3_Id,
-                                              ports_unit2_saturationLogic_channel4_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(ports_unit1_temperatureLogic_channel1_Id,
+                                             ports_unit1_temperatureLogic_channel2_Id,
+                                             ports_unit1_temperatureLogic_channel3_Id,
+                                             ports_unit1_temperatureLogic_channel4_Id,
+                                             ports_unit1_pressureLogic_channel1_Id,
+                                             ports_unit1_pressureLogic_channel2_Id,
+                                             ports_unit1_pressureLogic_channel3_Id,
+                                             ports_unit1_pressureLogic_channel4_Id,
+                                             ports_unit1_saturationLogic_channel1_Id,
+                                             ports_unit1_saturationLogic_channel2_Id,
+                                             ports_unit1_saturationLogic_channel3_Id,
+                                             ports_unit1_saturationLogic_channel4_Id,
+                                             ports_unit2_temperatureLogic_channel1_Id,
+                                             ports_unit2_temperatureLogic_channel2_Id,
+                                             ports_unit2_temperatureLogic_channel3_Id,
+                                             ports_unit2_temperatureLogic_channel4_Id,
+                                             ports_unit2_pressureLogic_channel1_Id,
+                                             ports_unit2_pressureLogic_channel2_Id,
+                                             ports_unit2_pressureLogic_channel3_Id,
+                                             ports_unit2_pressureLogic_channel4_Id,
+                                             ports_unit2_saturationLogic_channel1_Id,
+                                             ports_unit2_saturationLogic_channel2_Id,
+                                             ports_unit2_saturationLogic_channel3_Id,
+                                             ports_unit2_saturationLogic_channel4_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ()
+    val eventOutPortIds: ISZ[Art.PortId] = IS()
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: InstrumentationMockThread_Initialization_Api): Unit = {}

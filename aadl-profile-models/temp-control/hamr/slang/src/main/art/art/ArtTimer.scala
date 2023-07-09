@@ -3,7 +3,6 @@
 package art
 
 import org.sireum._
-import art.Art.BridgeId
 
 @sig trait TimerCallback {
   def callback(): Unit

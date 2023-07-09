@@ -20,16 +20,13 @@ import tc.TempControlAadl.{OperatorInterface_tcp_opInterface => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_currentTemp,
-              ports_setPoint),
+    dataIns = ISZ[art.UPort](ports_currentTemp),
 
-    dataIns = ISZ(ports_currentTemp),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = ISZ(),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ(ports_setPoint)
+    eventOuts = ISZ[art.UPort](ports_setPoint)
   )
 
   val initialization_api : OperatorInterface_Initialization_Api = {
@@ -78,13 +75,13 @@ object OperatorInterface_tcp_opInterface_Bridge {
     initialization_api: OperatorInterface_Initialization_Api,
     operational_api: OperatorInterface_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ(ports_currentTemp_Id)
+    val dataInPortIds: ISZ[Art.PortId] = IS(ports_currentTemp_Id)
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_setPoint_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(ports_setPoint_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: OperatorInterface_Initialization_Api): Unit = {}

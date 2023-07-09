@@ -20,16 +20,13 @@ import tc.TempControlAadl.{Fan_tcp_fan => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_fanCmd,
-              ports_fanAck),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = ISZ(),
+    dataOuts = ISZ[art.UPort](),
 
-    dataOuts = ISZ(),
+    eventIns = ISZ[art.UPort](ports_fanCmd),
 
-    eventIns = ISZ(ports_fanCmd),
-
-    eventOuts = ISZ(ports_fanAck)
+    eventOuts = ISZ[art.UPort](ports_fanAck)
   )
 
   val initialization_api : Fan_Initialization_Api = {
@@ -78,13 +75,13 @@ object Fan_tcp_fan_Bridge {
     initialization_api: Fan_Initialization_Api,
     operational_api: Fan_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ(ports_fanCmd_Id)
+    val eventInPortIds: ISZ[Art.PortId] = IS(ports_fanCmd_Id)
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ()
+    val dataOutPortIds: ISZ[Art.PortId] = IS()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_fanAck_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(ports_fanAck_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: Fan_Initialization_Api): Unit = {}

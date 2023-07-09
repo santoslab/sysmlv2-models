@@ -20,16 +20,13 @@ import tc.TempControlAadl.{TempSensor_tcp_tempSensor => component}
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
-    all = ISZ(ports_currentTemp,
-              ports_tempChanged),
+    dataIns = ISZ[art.UPort](),
 
-    dataIns = ISZ(),
+    dataOuts = ISZ[art.UPort](ports_currentTemp),
 
-    dataOuts = ISZ(ports_currentTemp),
+    eventIns = ISZ[art.UPort](),
 
-    eventIns = ISZ(),
-
-    eventOuts = ISZ(ports_tempChanged)
+    eventOuts = ISZ[art.UPort](ports_tempChanged)
   )
 
   val initialization_api : TempSensor_Initialization_Api = {
@@ -78,13 +75,13 @@ object TempSensor_tcp_tempSensor_Bridge {
     initialization_api: TempSensor_Initialization_Api,
     operational_api: TempSensor_Operational_Api) extends Bridge.EntryPoints {
 
-    val dataInPortIds: ISZ[Art.PortId] = ISZ()
+    val dataInPortIds: ISZ[Art.PortId] = IS()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = IS()
 
-    val dataOutPortIds: ISZ[Art.PortId] = ISZ(ports_currentTemp_Id)
+    val dataOutPortIds: ISZ[Art.PortId] = IS(ports_currentTemp_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(ports_tempChanged_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = IS(ports_tempChanged_Id)
 
     def initialise(): Unit = {
       // implement the following method in 'component':  def initialise(api: TempSensor_Initialization_Api): Unit = {}
