@@ -14,6 +14,12 @@ library package AADL_Definitions {
 	abstract port def EventData;
 	
 	
+	abstract state def Initial;
+	
 	abstract state def Complete;
+	
+	abstract state def Final;
+	
+	abstract state def Execute;
 
 }
