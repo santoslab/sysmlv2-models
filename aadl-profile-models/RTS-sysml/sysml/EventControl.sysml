@@ -7,8 +7,8 @@ package EventControl {
 		part eventControlMockThread : EventControlMockThread : Thread;
 		
 		port ports {
-			out manualActuatorInput1: Data: Base_Types::Boolean;
-			out manualActuatorInput2: Data: Base_Types::Boolean;
+			out manualActuatorInput1: DataPort: Base_Types::Boolean;
+			out manualActuatorInput2: DataPort: Base_Types::Boolean;
 		}
 		
 		connection mAI1 connect eventControlMockThread.ports.manualActuatorInput1 to ports.manualActuatorInput1;
@@ -17,8 +17,8 @@ package EventControl {
 	
 	part def EventControlMockThread :> Thread {
 		port ports {
-			out manualActuatorInput1: Data: Base_Types::Boolean;
-			out manualActuatorInput2: Data: Base_Types::Boolean;
+			out manualActuatorInput1: DataPort: Base_Types::Boolean;
+			out manualActuatorInput2: DataPort: Base_Types::Boolean;
 		}
 		@Properties {
 			Dispatch_Protocol = Periodic;

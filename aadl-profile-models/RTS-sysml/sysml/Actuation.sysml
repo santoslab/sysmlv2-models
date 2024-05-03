@@ -11,37 +11,37 @@ package Actuation {
 		
 		port ports {
 			// actuation unit 1
-			in unit1_temperatureLogic_channel1: Data: Base_Types::Boolean;
-			in unit1_temperatureLogic_channel2: Data: Base_Types::Boolean;
-			in unit1_temperatureLogic_channel3: Data: Base_Types::Boolean;
-			in unit1_temperatureLogic_channel4: Data: Base_Types::Boolean;
-			in unit1_pressureLogic_channel1: Data: Base_Types::Boolean;
-			in unit1_pressureLogic_channel2: Data: Base_Types::Boolean;
-			in unit1_pressureLogic_channel3: Data: Base_Types::Boolean;
-			in unit1_pressureLogic_channel4: Data: Base_Types::Boolean;
-			in unit1_saturationLogic_channel1: Data: Base_Types::Boolean;
-			in unit1_saturationLogic_channel2: Data: Base_Types::Boolean;
-			in unit1_saturationLogic_channel3: Data: Base_Types::Boolean;
-			in unit1_saturationLogic_channel4: Data: Base_Types::Boolean;
+			in unit1_temperatureLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit1_temperatureLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit1_temperatureLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit1_temperatureLogic_channel4: DataPort: Base_Types::Boolean;
+			in unit1_pressureLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit1_pressureLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit1_pressureLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit1_pressureLogic_channel4: DataPort: Base_Types::Boolean;
+			in unit1_saturationLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit1_saturationLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit1_saturationLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit1_saturationLogic_channel4: DataPort: Base_Types::Boolean;
 			// actuation unit 2
-			in unit2_temperatureLogic_channel1: Data: Base_Types::Boolean;
-			in unit2_temperatureLogic_channel2: Data: Base_Types::Boolean;
-			in unit2_temperatureLogic_channel3: Data: Base_Types::Boolean;
-			in unit2_temperatureLogic_channel4: Data: Base_Types::Boolean;
-			in unit2_pressureLogic_channel1: Data: Base_Types::Boolean;
-			in unit2_pressureLogic_channel2: Data: Base_Types::Boolean;
-			in unit2_pressureLogic_channel3: Data: Base_Types::Boolean;
-			in unit2_pressureLogic_channel4: Data: Base_Types::Boolean;
-			in unit2_saturationLogic_channel1: Data: Base_Types::Boolean;
-			in unit2_saturationLogic_channel2: Data: Base_Types::Boolean;
-			in unit2_saturationLogic_channel3: Data: Base_Types::Boolean;
-			in unit2_saturationLogic_channel4: Data: Base_Types::Boolean;
+			in unit2_temperatureLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit2_temperatureLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit2_temperatureLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit2_temperatureLogic_channel4: DataPort: Base_Types::Boolean;
+			in unit2_pressureLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit2_pressureLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit2_pressureLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit2_pressureLogic_channel4: DataPort: Base_Types::Boolean;
+			in unit2_saturationLogic_channel1: DataPort: Base_Types::Boolean;
+			in unit2_saturationLogic_channel2: DataPort: Base_Types::Boolean;
+			in unit2_saturationLogic_channel3: DataPort: Base_Types::Boolean;
+			in unit2_saturationLogic_channel4: DataPort: Base_Types::Boolean;
 			// manual controls
-			in tempPressureManualInput: Data: Base_Types::Boolean;
-			in saturationManualInput: Data: Base_Types::Boolean;
+			in tempPressureManualInput: DataPort: Base_Types::Boolean;
+			in saturationManualInput: DataPort: Base_Types::Boolean;
 			// outputs
-			out tempPressureOutput: Data: Base_Types::Boolean;
-			out saturationOutput: Data: Base_Types::Boolean;
+			out tempPressureOutput: DataPort: Base_Types::Boolean;
+			out saturationOutput: DataPort: Base_Types::Boolean;
 		}
 		
 		// actuation unit 1 
@@ -90,20 +90,20 @@ package Actuation {
 		part tempPressureTripOut : OrLogicPartition : Process;
 		
 		port ports {
-			in temperatureLogic_channel1: Data: Base_Types::Boolean;
-			in temperatureLogic_channel2: Data: Base_Types::Boolean;
-			in temperatureLogic_channel3: Data: Base_Types::Boolean;
-			in temperatureLogic_channel4: Data: Base_Types::Boolean;
-			in pressureLogic_channel1: Data: Base_Types::Boolean;
-			in pressureLogic_channel2: Data: Base_Types::Boolean;
-			in pressureLogic_channel3: Data: Base_Types::Boolean;
-			in pressureLogic_channel4: Data: Base_Types::Boolean;
-			in saturationLogic_channel1: Data: Base_Types::Boolean;
-			in saturationLogic_channel2: Data: Base_Types::Boolean;
-			in saturationLogic_channel3: Data: Base_Types::Boolean;
-			in saturationLogic_channel4: Data: Base_Types::Boolean;
-			out tempPressureTripOut_actuate: Data: Base_Types::Boolean;
-			out saturationLogic_actuate: Data: Base_Types::Boolean;
+			in temperatureLogic_channel1: DataPort: Base_Types::Boolean;
+			in temperatureLogic_channel2: DataPort: Base_Types::Boolean;
+			in temperatureLogic_channel3: DataPort: Base_Types::Boolean;
+			in temperatureLogic_channel4: DataPort: Base_Types::Boolean;
+			in pressureLogic_channel1: DataPort: Base_Types::Boolean;
+			in pressureLogic_channel2: DataPort: Base_Types::Boolean;
+			in pressureLogic_channel3: DataPort: Base_Types::Boolean;
+			in pressureLogic_channel4: DataPort: Base_Types::Boolean;
+			in saturationLogic_channel1: DataPort: Base_Types::Boolean;
+			in saturationLogic_channel2: DataPort: Base_Types::Boolean;
+			in saturationLogic_channel3: DataPort: Base_Types::Boolean;
+			in saturationLogic_channel4: DataPort: Base_Types::Boolean;
+			out tempPressureTripOut_actuate: DataPort: Base_Types::Boolean;
+			out saturationLogic_actuate: DataPort: Base_Types::Boolean;
 		}
 		
 		connection tLc1 connect ports.temperatureLogic_channel1 to temperatureLogic.ports.channel1;
@@ -129,10 +129,10 @@ package Actuation {
 		part tempPressureActuator : ActuatorPartition : Process;
 		
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			in manualActuatorInput: Data: Base_Types::Boolean;
-			out output: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			in manualActuatorInput: DataPort: Base_Types::Boolean;
+			out output: DataPort: Base_Types::Boolean;
 		}
 		
 		connection c1 connect ports.channel1 to actuateTempPressureActuator.ports.channel1;
@@ -147,10 +147,10 @@ package Actuation {
 		part saturationActuator : ActuatorPartition : Process;
 		
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			in manualActuatorInput: Data: Base_Types::Boolean;
-			out output: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			in manualActuatorInput: DataPort: Base_Types::Boolean;
+			out output: DataPort: Base_Types::Boolean;
 		}
 		
 		connection c1 connect ports.channel1 to actuateSaturationActuator.ports.channel1;
@@ -164,11 +164,11 @@ package Actuation {
 		part coincidenceLogic : CoincidenceLogic : Thread;
 		
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			in channel3: Data: Base_Types::Boolean;
-			in channel4: Data: Base_Types::Boolean;
-			out actuate: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			in channel3: DataPort: Base_Types::Boolean;
+			in channel4: DataPort: Base_Types::Boolean;
+			out actuate: DataPort: Base_Types::Boolean;
 		}
 		
 		connection c1 connect ports.channel1 to coincidenceLogic.ports.channel1;
@@ -180,11 +180,11 @@ package Actuation {
 	
 	part def CoincidenceLogic :> Thread {
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			in channel3: Data: Base_Types::Boolean;
-			in channel4: Data: Base_Types::Boolean;
-			out actuate: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			in channel3: DataPort: Base_Types::Boolean;
+			in channel4: DataPort: Base_Types::Boolean;
+			out actuate: DataPort: Base_Types::Boolean;
 		}
 		@Properties {
 			Dispatch_Protocol = Periodic;
@@ -196,9 +196,9 @@ package Actuation {
 		part orLogic : OrLogic : Thread;
 		
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			out actuate: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			out actuate: DataPort: Base_Types::Boolean;
 		}
 		
 		connection c1 connect ports.channel1 to orLogic.ports.channel1;
@@ -208,9 +208,9 @@ package Actuation {
 	
 	part def OrLogic :> Thread {
 		port ports {
-			in channel1: Data: Base_Types::Boolean;
-			in channel2: Data: Base_Types::Boolean;
-			out actuate: Data: Base_Types::Boolean;
+			in channel1: DataPort: Base_Types::Boolean;
+			in channel2: DataPort: Base_Types::Boolean;
+			out actuate: DataPort: Base_Types::Boolean;
 		}
 		@Properties {
 			Dispatch_Protocol = Periodic;
@@ -222,9 +222,9 @@ package Actuation {
 		part actuator : Actuator : Thread;
 		
 		port ports {
-			in input: Data: Base_Types::Boolean;
-			in manualActuatorInput: Data: Base_Types::Boolean;
-			out output: Data: Base_Types::Boolean;
+			in input: DataPort: Base_Types::Boolean;
+			in manualActuatorInput: DataPort: Base_Types::Boolean;
+			out output: DataPort: Base_Types::Boolean;
 		}
 		
 		connection i connect ports.input to actuator.ports.input;
@@ -234,9 +234,9 @@ package Actuation {
 	
 	part def Actuator :> Thread {
 		port ports {
-			in input: Data: Base_Types::Boolean;
-			in manualActuatorInput: Data: Base_Types::Boolean;
-			out output: Data: Base_Types::Boolean;
+			in input: DataPort: Base_Types::Boolean;
+			in manualActuatorInput: DataPort: Base_Types::Boolean;
+			out output: DataPort: Base_Types::Boolean;
 		}
 		@Properties {
 			Dispatch_Protocol = Periodic;

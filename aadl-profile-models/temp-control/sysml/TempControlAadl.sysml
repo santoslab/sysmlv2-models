@@ -30,8 +30,8 @@ package TempControlAadl {
 	part def TempSensor :> Thread {
 		// features
 		port ports {
-			out currentTemp: Data: Temperature;
-			out tempChanged: Event;
+			out currentTemp: DataPort: Temperature;
+			out tempChanged: EventPort;
 		}
 		
 		@Properties {
@@ -43,11 +43,11 @@ package TempControlAadl {
 	part def TempControl :> Thread {
 		// features
 		port ports {
-			in currentTemp: Data: Temperature;
-			in tempChanged: Event;
-			out fanCmd: EventData: FanCmd;
-			in fanAck: EventData: FanAck;
-			in setPoint: EventData: SetPoint;
+			in currentTemp: DataPort: Temperature;
+			in tempChanged: EventPort;
+			out fanCmd: EventDataPort: FanCmd;
+			in fanAck: EventDataPort: FanAck;
+			in setPoint: EventDataPort: SetPoint;
 		}
 		
 		@Properties {
@@ -59,8 +59,8 @@ package TempControlAadl {
 	part def Fan :> Thread {
 		// features
 		port ports {
-			in fanCmd: EventData: FanCmd;
-			out fanAck: EventData: FanAck;
+			in fanCmd: EventDataPort: FanCmd;
+			out fanAck: EventDataPort: FanAck;
 		}
 		
 		@Properties {
@@ -72,8 +72,8 @@ package TempControlAadl {
 	part def OperatorInterface :> Thread {
 		// features
 		port ports {
-			in currentTemp: Data: Temperature;
-			out setPoint: EventData: SetPoint;
+			in currentTemp: DataPort: Temperature;
+			out setPoint: EventDataPort: SetPoint;
 		}
 	
 		@Properties {
