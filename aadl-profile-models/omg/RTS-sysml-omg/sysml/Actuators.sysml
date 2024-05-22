@@ -1,7 +1,7 @@
 package Actuators {
 	
 	import AADL_Properties::*;
-	import AADL_Definitions::*;
+	import AADL_Definitions_omg::*;
 	
 	part def ActuatorsMockProcess :> Process {
 		part actuatorsMockThread : ActuatorsMockThread;

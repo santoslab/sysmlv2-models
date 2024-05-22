@@ -4,7 +4,7 @@ package RTS {
 	import Actuators::*;
 	import EventControl::*;
 	import Instrumentation::*;
-	import AADL_Definitions::*;
+	import AADL_Definitions_omg::*;
 	
 	part def RTS :> System {
 		part actuationSubsystem: Actuation::RTSActuation;

@@ -1,66 +1,18 @@
 library package AADL_Definitions {
 
-	import Connections::BinaryConnection;
-	
-	enum def ComponentCategory {
-		enum Abstract; 
-		enum Bus; 
-		enum Data; 
-		enum Device; 
-		enum Memory;
-		enum Process;
-		enum Processor; 
-		enum System; 
-		enum Subprogram;
-		enum SubprogramGroup; 
-		enum Thread; 
-		enum ThreadGroup;
-		enum VirtualProcessor; 
-		enum VirtualBus; 
-	}
+	abstract part def System;
 
-	abstract part def Component {
-		attribute category : ComponentCategory; 
-	}
-	
-	part def System :> Component {
-		:>> category = ComponentCategory::System;
-	}
+	abstract part def Process;
 
-	part def Process :> Component {
-		:>> category = ComponentCategory::Process;
-	}
-	
-	part def Thread :> Component {
-		:>> category = ComponentCategory::Thread;
-	}
-	
-	part def Data :> Component {
-		:>> category = ComponentCategory::Data;
-	}
+	abstract part def Thread;
 	
 	
-	
-	abstract port def Feature;
-	
-	port def AbstractFeature :> Feature { // AADL feature
-		inout item type : Component;
-	}
-	
-	port def DataPort :> Feature { 
-	 	inout item valueType : Component;
-	}
+	abstract port def Data;
 
-	port def EventPort :> Feature;
+	abstract port def Event;
+
+	abstract port def EventData;
 	
-	port def EventDataPort :> Feature {
-		inout item valueType: Component;
-	}
-	
-	connection def PortConnection :> BinaryConnection {
-		end source : AbstractFeature[0..*] :>> BinaryConnection::source;
-		end target : AbstractFeature[0..*] :>> BinaryConnection::target; 
-	}
 	
 	abstract state def Initial;
 	

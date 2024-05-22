@@ -1,7 +1,7 @@
 package Actuation {
 	
 	import AADL_Properties::*;
-	import AADL_Definitions::*;
+	import AADL_Definitions_omg::*;
 	
 	part def RTSActuation :> System {
 

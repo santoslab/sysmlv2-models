@@ -1,7 +1,7 @@
 package Instrumentation {
 	
 	import AADL_Properties::*;
-	import AADL_Definitions::*;
+	import AADL_Definitions_omg::*;
 	
 	part def InstrumentationMockProcess :> Process {
 		part instrumentationMockThread : InstrumentationMockThread;
