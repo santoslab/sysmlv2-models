@@ -7,8 +7,8 @@ package Actuators {
 		part actuatorsMockThread : ActuatorsMockThread : Thread;
 		
 		port ports {
-			in tempPressureActuate: DataPort: Base_Types::Boolean;
-			in saturationActuate: DataPort: Base_Types::Boolean;
+			in tempPressureActuate: Data: Base_Types::Boolean;
+			in saturationActuate: Data: Base_Types::Boolean;
 		}
 		
 		connection tPA connect ports.tempPressureActuate to actuatorsMockThread.ports.tempPressureActuate;
@@ -17,8 +17,8 @@ package Actuators {
 	
 	part def ActuatorsMockThread :> Thread {
 		port ports {
-			in tempPressureActuate: DataPort: Base_Types::Boolean;
-			in saturationActuate: DataPort: Base_Types::Boolean;
+			in tempPressureActuate: Data: Base_Types::Boolean;
+			in saturationActuate: Data: Base_Types::Boolean;
 		}
 		@Properties {
 			Dispatch_Protocol = Periodic;
