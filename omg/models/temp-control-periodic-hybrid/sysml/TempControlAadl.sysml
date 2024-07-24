@@ -7,7 +7,7 @@ package TempControlAadl {
 	language "GUMBO" /*{
 	  library
         functions
-          def inRange(temp: TempSensor::Temperature): Base_Types::Boolean :=
+          def inRange(temp: Temperature): AADL_Base_Types::Boolean :=
             temp.degrees >= f32(-50.0) and temp.degrees <= f32(150.0);
         }*/
 
@@ -68,7 +68,7 @@ package TempControlAadl {
 		language "GUMBO" /*{
 
           state
-            latestFanCmd: CoolingFan::FanCmd;
+            latestFanCmd: FanCmd;
 
           integration
             assume currentTempRange:
@@ -78,11 +78,11 @@ package TempControlAadl {
              modifies (latestFanCmd);
              guarantee initLatestFanCmd "Initialize state variable":
               // provide initial value for state variable and out data port
-              latestFanCmd == CoolingFan::FanCmd.Off;
+              latestFanCmd == FanCmd.Off;
 
              guarantee initFanCmd "Initial fan command":
                // provide initial value for state variable and out data port
-               fanCmd == CoolingFan::FanCmd.Off;
+               fanCmd == FanCmd.Off;
 
           // illustrate cases syntax
           compute
@@ -91,20 +91,20 @@ package TempControlAadl {
               guarantee altCurrentTempLTSetPoint "If current temperature is less than
                                                  |the current low set point, then the fan state shall be Off" :
                 //(currentTemp.degrees < setPoint.low.degrees) ->:
-                //   ((latestFanCmd == CoolingFan::FanCmd.Off) and (fanCmd == CoolingFan::FanCmd.Off));
+                //   ((latestFanCmd == FanCmd.Off) and (fanCmd == FanCmd.Off));
                 // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
                 //        perhaps do simplies(lhs, rhs)
                 (currentTemp.degrees < setPoint.low.degrees) implies
-                   ((latestFanCmd == CoolingFan::FanCmd.Off) and (fanCmd == CoolingFan::FanCmd.Off));
+                   ((latestFanCmd == FanCmd.Off) and (fanCmd == FanCmd.Off));
 
               guarantee altCurrentTempGTSetPoint "If current temperature is greater than
                                                  |the current high set point, then the fan state shall be On":
                  //(currentTemp.degrees > setPoint.high.degrees) ->:
-                 //  ((latestFanCmd == CoolingFan::FanCmd.On) & (fanCmd == CoolingFan::FanCmd.On));
+                 //  ((latestFanCmd == FanCmd.On) & (fanCmd == FanCmd.On));
                  // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
                  //        perhaps do simplies(lhs, rhs)
                  (currentTemp.degrees > setPoint.high.degrees) implies
-                   ((latestFanCmd == CoolingFan::FanCmd.On) & (fanCmd == CoolingFan::FanCmd.On));
+                   ((latestFanCmd == FanCmd.On) & (fanCmd == FanCmd.On));
 
               guarantee altCurrentTempInRange "If current temperature is greater than or equal to the
                                               |current low set point and less than or equal to the current high set point,
@@ -122,12 +122,12 @@ package TempControlAadl {
               case currentTempLTSetPoint "If current temperature is less than
                                          |the current low set point, then the fan state shall be Off":
                 assume currentTemp.degrees < setPoint.low.degrees;
-                guarantee (latestFanCmd == CoolingFan::FanCmd.Off) & (fanCmd == CoolingFan::FanCmd.Off);
+                guarantee (latestFanCmd == FanCmd.Off) & (fanCmd == FanCmd.Off);
 
               case currentTempGTSetPoint "If current temperature is greater than
                                          |the current high set point, then the fan state shall be On":
                 assume currentTemp.degrees > setPoint.high.degrees;
-                guarantee (latestFanCmd == CoolingFan::FanCmd.On) & (fanCmd == CoolingFan::FanCmd.On);
+                guarantee (latestFanCmd == FanCmd.On) & (fanCmd == FanCmd.On);
 
               case currentTempInRange "If current temperature is greater than or equal to the
                                       |current low set point and less than or equal to the current high set point,
