@@ -3,6 +3,6 @@ package GUMBO_Definitions {
     library
         functions
 
-          def absoluteZero(value: AADL_Base_Types::Float_32): AADL_Base_Types::Boolean := f32(-459.67);
+          def absoluteZero(): AADL_Base_Types::Boolean := f32(-459.67);
   }*/
 }
