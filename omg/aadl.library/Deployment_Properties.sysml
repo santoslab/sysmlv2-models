@@ -10,7 +10,7 @@
 	allocation def Actual_Processor_Binding {
 		end part sw : AADL::Component; 
 		end part hw : AADL::Component; 
-		}
+	}
 	
 	attribute def Scheduling_Protocol :> AADL::Property, Supported_Scheduling_Protocols;
 	
