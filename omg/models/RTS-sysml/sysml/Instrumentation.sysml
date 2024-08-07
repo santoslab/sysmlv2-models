@@ -8,31 +8,31 @@ package Instrumentation {
 		part instrumentationMockThread : InstrumentationMockThread;
 		
 			// actuation unit 1
-		out port unit1_temperatureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
 			// actuation unit 2
-		out port unit2_temperatureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
 		
 		// actuation unit 1
 		connection u1tLc1 : PortConnection connect instrumentationMockThread.unit1_temperatureLogic_channel1 to unit1_temperatureLogic_channel1;
@@ -64,31 +64,31 @@ package Instrumentation {
 	
 	part def InstrumentationMockThread :> Thread {
 			// actuation unit 1
-		out port unit1_temperatureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_temperatureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_pressureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit1_saturationLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_temperatureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_pressureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit1_saturationLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
 			// actuation unit 2
-		out port unit2_temperatureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_temperatureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_pressureLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel1 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel2 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel3 : DataPort { out :> type : Base_Types::Boolean; }
-		out port unit2_saturationLogic_channel4 : DataPort { out :> type : Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_temperatureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_pressureLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel1 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel2 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel3 : DataPort { out :> type : AADL_Base_Types::Boolean; }
+		out port unit2_saturationLogic_channel4 : DataPort { out :> type : AADL_Base_Types::Boolean; }
 
 		attribute :>> Dispatch_Protocol = Periodic;
 		attribute :>> Period = 1000 [ms];

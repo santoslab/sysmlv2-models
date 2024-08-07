@@ -26,7 +26,6 @@ package TempControlAadl {
 		// connections
 		connection ctTStoTC : PortConnection connect tempSensor.currentTemp to tempControl.currentTemp;
 		connection ctTStoOI : PortConnection connect tempSensor.currentTemp to opInterface.currentTemp;
-		connection tcTStoTC : PortConnection connect tempSensor.tempChanged to tempControl.tempChanged;
 		connection fcTCtoF : PortConnection connect tempControl.fanCmd to fan.fanCmd;
 		connection faFtoTC : PortConnection connect fan.fanAck to tempControl.fanAck;
 		connection spOItoTC : PortConnection connect opInterface.setPoint to tempControl.setPoint;
@@ -90,31 +89,19 @@ package TempControlAadl {
 
               guarantee altCurrentTempLTSetPoint "If current temperature is less than
                                                  |the current low set point, then the fan state shall be Off" :
-                //(currentTemp.degrees < setPoint.low.degrees) ->:
-                //   ((latestFanCmd == FanCmd.Off) and (fanCmd == FanCmd.Off));
-                // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                //        perhaps do simplies(lhs, rhs)
-                (currentTemp.degrees < setPoint.low.degrees) implies
-                   ((latestFanCmd == FanCmd.Off) and (fanCmd == FanCmd.Off));
+                '->:'(currentTemp.degrees < setPoint.low.degrees,
+                      latestFanCmd == FanCmd.Off and fanCmd == FanCmd.Off);
 
               guarantee altCurrentTempGTSetPoint "If current temperature is greater than
                                                  |the current high set point, then the fan state shall be On":
-                 //(currentTemp.degrees > setPoint.high.degrees) ->:
-                 //  ((latestFanCmd == FanCmd.On) & (fanCmd == FanCmd.On));
-                 // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                 //        perhaps do simplies(lhs, rhs)
-                 (currentTemp.degrees > setPoint.high.degrees) implies
-                   ((latestFanCmd == FanCmd.On) & (fanCmd == FanCmd.On));
+                 '->:'(currentTemp.degrees > setPoint.high.degrees,
+                       latestFanCmd == FanCmd.On & fanCmd == FanCmd.On);
 
               guarantee altCurrentTempInRange "If current temperature is greater than or equal to the
                                               |current low set point and less than or equal to the current high set point,
                                               |then the current fan state is maintained." :
-                //((currentTemp.degrees >= setPoint.low.degrees) & (currentTemp.degrees <= setPoint.high.degrees)) ->:
-                //  ((latestFanCmd == In(latestFanCmd)) & (fanCmd == latestFanCmd));
-                 // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                 //        perhaps do simplies(lhs, rhs)
-                ((currentTemp.degrees >= setPoint.low.degrees) & (currentTemp.degrees <= setPoint.high.degrees)) implies
-                  ((latestFanCmd == In(latestFanCmd)) & (fanCmd == latestFanCmd));
+                '->:'(currentTemp.degrees >= setPoint.low.degrees & currentTemp.degrees <= setPoint.high.degrees,
+                      latestFanCmd == In(latestFanCmd) & fanCmd == latestFanCmd);
 
             // alternative style using cases
 

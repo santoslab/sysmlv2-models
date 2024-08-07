@@ -108,18 +108,14 @@ package TempControlAadl {
             assume
                 a1 "If the previously received currentTemp was less than the previously
                    |received setPoint then the last fan command must have been Off":
-                  //((latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off));
-                  // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                  //        perhaps do simplies(lhs, rhs)
-                  ((latestTemp.degrees < currentSetPoint.low.degrees) implies (currentFanState == CoolingFan::FanCmd.Off));
+                  '->:'(latestTemp.degrees < currentSetPoint.low.degrees,
+                        currentFanState == CoolingFan::FanCmd.Off);
 
             assume
                 a2 "If the previously received currentTemp was more than the previously
                    |received setPoint then the last fan command must have been On":
-                  //((latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan::FanCmd.On));
-                  // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                  //        perhaps do simplies(lhs, rhs)
-                  ((latestTemp.degrees > currentSetPoint.high.degrees) implies (currentFanState == CoolingFan::FanCmd.On));
+                  '->:'(latestTemp.degrees > currentSetPoint.high.degrees,
+                        currentFanState == CoolingFan::FanCmd.On);
 
             //    ---------------------------
             //     Compute Entry Point General Clauses
@@ -128,30 +124,21 @@ package TempControlAadl {
             //       as independent (not associated with a handler) guarantee clauses.
             //    ---------------------------
             guarantee  TC_Req_01 "If the current temperature is less than the set point, then the fan state shall be Off.":
-              //(latestTemp.degrees < currentSetPoint.low.degrees) ->: (currentFanState == CoolingFan::FanCmd.Off);
-              // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-              //        perhaps do simplies(lhs, rhs)
-              (latestTemp.degrees < currentSetPoint.low.degrees) implies (currentFanState == CoolingFan::FanCmd.Off);
+              '->:'(latestTemp.degrees < currentSetPoint.low.degrees,
+                    currentFanState == CoolingFan::FanCmd.Off);
 
             guarantee TC_Req_02 "If the current temperature is greater than the set point,
                                 |then the fan state shall be On.":
-              //(latestTemp.degrees > currentSetPoint.high.degrees) ->: (currentFanState == CoolingFan::FanCmd.On);
-              // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-              //        perhaps do simplies(lhs, rhs)
-              (latestTemp.degrees > currentSetPoint.high.degrees) implies (currentFanState == CoolingFan::FanCmd.On);
+              '->:' (latestTemp.degrees > currentSetPoint.high.degrees,
+                     currentFanState == CoolingFan::FanCmd.On);
 
             guarantee TC_Req_03 "If the current temperature is greater than or equal to the
                                 |current low set point and less than or equal to the current high set point,
                                 |then the current fan state is maintained.":
-              ((latestTemp.degrees >= currentSetPoint.low.degrees) &
-                //(latestTemp.degrees <= currentSetPoint.high.degrees))
-                //-- if we are still in set point range, don't change the fan state
-                //->: (currentFanState == In(currentFanState));
-                // FIXME: KerML only has a short-circuit implies so this isn't a correct translation. Could
-                //        perhaps do simplies(lhs, rhs)
-              (latestTemp.degrees <= currentSetPoint.high.degrees))
-                // if we are still in set point range, don't change the fan state
-                implies (currentFanState == In(currentFanState));
+              '->:'(latestTemp.degrees >= currentSetPoint.low.degrees & latestTemp.degrees <= currentSetPoint.high.degrees
+                    ,
+                    // if we are still in set point range, don't change the fan state
+                    currentFanState == In(currentFanState));
 
             guarantee mustSendFanCmd "If the local record of the fan state was updated,
                                      |then send a fan command event with this updated value.":

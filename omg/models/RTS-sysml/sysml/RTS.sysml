@@ -46,6 +46,7 @@ package RTS {
 		connection foo2 : PortConnection connect actuationSubsystem.saturationOutput to actuatorsMock.saturationActuate;
 		
 		// : PortConnection connection instances (note c0's source is a non composite part usage)
+		/*
 		connection c0 : PortConnection connect actuationSubsystem.actuationUnit1.temperatureLogic.coincidenceLogic.actuate to actuationSubsystem.actuationUnit1.tempPressureTripOut.orLogic.channel1;
 		connection c1 : PortConnection connect actuationSubsystem.actuationUnit1.pressureLogic.coincidenceLogic.actuate to actuationSubsystem.actuationUnit1.tempPressureTripOut.orLogic.channel2;
 		connection c2 : PortConnection connect actuationSubsystem.actuationUnit2.temperatureLogic.coincidenceLogic.actuate to actuationSubsystem.actuationUnit2.tempPressureTripOut.orLogic.channel1;
@@ -84,5 +85,6 @@ package RTS {
 		connection c35 : PortConnection connect eventControlMock.eventControlMockThread.manualActuatorInput2 to actuationSubsystem.saturationActuatorUnit.saturationActuator.actuator.manualActuatorInput;
 		connection c36 : PortConnection connect actuationSubsystem.tempPressureActuatorUnit.tempPressureActuator.actuator.output to actuatorsMock.actuatorsMockThread.tempPressureActuate;
 		connection c37 : PortConnection connect actuationSubsystem.saturationActuatorUnit.saturationActuator.actuator.output to actuatorsMock.actuatorsMockThread.saturationActuate;
+		*/
 	}
 }
