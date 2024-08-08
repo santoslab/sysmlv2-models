@@ -47,12 +47,6 @@ standard library package AADL {
 	
 	part def Abstract :> Component {
 		attribute :>> category = ComponentCategory::Abstract;
-		// or
-		//attribute :>> category = AADL::ComponentCategory::Abstract;
-		// or
-		//import ComponentCategory::*;
-		//attribute :>> category = Abstract;
-		
 		attribute Compute_Execution_Time : Timing_Properties::Compute_Execution_Time;
 		attribute Period : Timing_Properties::Period;
 	}
