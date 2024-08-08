@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>isolette-sysmlv2</name>
+	<name>temp-control-mixed-hybrid-omg</name>
 	<comment></comment>
 	<projects>
-		<project>sysml.library</project>
-		<project>aadl.library</project>
+	  <project>sysml.library</project>
+      <project>aadl.library</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
