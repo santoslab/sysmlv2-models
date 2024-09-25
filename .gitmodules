@@ -1,0 +1,12 @@
+[submodule "sysml-aadl-libraries"]
+	path = sysml-aadl-libraries
+	url = https://github.com/santoslab/sysml-aadl-libraries.git
+[submodule "models/sysml-isolette"]
+	path = models/sysml-isolette
+	url = https://github.com/santoslab/sysml-isolette.git
+[submodule "models/sysml-rts"]
+	path = models/sysml-rts
+	url = https://github.com/santoslab/sysml-rts.git
+[submodule "models/sysml-temp-control-periodic"]
+	path = models/sysml-temp-control-periodic
+	url = https://github.com/santoslab/sysml-temp-control-periodic.git
