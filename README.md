@@ -24,7 +24,7 @@ package <id> {
 ### Import
 
 ```
-<mod> import <id> ⸨ :: <id> )* ⸨ :: * ⸩?
+<mod> import <id> ⸨ :: <id> )* ⸨ :: * ⸩? ;
 ```
 
 `<mod> ::= private`
@@ -32,7 +32,8 @@ package <id> {
 ### Part
 
 ```
-part def <id> :> <super> ⸨ <part-members> ⸩?  
+part def <id> :> <super> ⸨ <part-members>
+                         | ; ⸩  
 ```
 
 ```
@@ -47,7 +48,7 @@ part def <id> :> <super> ⸨ <part-members> ⸩?
           
 <name> ::= <id> ⸨ :: <id> ⸩*
 
-<part-members> ::= { <part-member>* } 
+<part-members> ::= { <part-member>* }
 ```
 
 `<part-member>`:
