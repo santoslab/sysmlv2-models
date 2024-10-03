@@ -146,8 +146,8 @@ language "GUMBO" /*{
   ⸨ functions ⸨ def <id> ( ⸨ <param> ⸨ , <param> ⸩* ⸩? ) : <name> := <exp> ; ⸩* ⸩?
   
   ⸨ compute ⸨ <modifies> ⸩?
-            ⸨ <assume> ;
-            | <guarantee> ;
+            ⸨ <assume>
+            | <guarantee>
             ⸩*
             ⸨ compute_cases ⸨ <compute-case> ⸩+ ⸩? 
             ⸨ <handle> ⸩* 
