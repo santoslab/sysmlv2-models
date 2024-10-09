@@ -1,0 +1,30 @@
+name: Linux
+
+on:
+  push:
+
+jobs:
+
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          path: sysmlv2-models
+      - name: Checkout-Sireum
+        uses: actions/checkout@v4
+        with:
+          repository: sireum/kekinian
+          submodules: recursive
+          path: kekinian
+      - name: Tipe
+        run: |
+          kekinian/bin/build.cmd
+          export SIREUM_HOME=$(pwd)/kekinian
+          export PATH=$SIREUM_HOME/bin:$PATH
+          
+          sireum
+          
+          sireum hamr sysml tipe --sourcepath $(pwd)/sysmlv2-models
