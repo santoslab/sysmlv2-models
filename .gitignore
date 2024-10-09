@@ -13,3 +13,8 @@
 **/target/
 **/lib/
 **/slang/js/
+**/.metals/
+**/.scala-build/
+**/.vscode/
+**/hamr/slang/
+**/air.json
