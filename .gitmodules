@@ -10,3 +10,6 @@
 [submodule "models/temp-control/sysml-temp-control-mixed"]
 	path = models/temp-control/sysml-temp-control-mixed
 	url = https://github.com/santoslab/sysml-temp-control-mixed.git
+[submodule "models/temp-control/sysml-temp-control-periodic"]
+	path = models/temp-control/sysml-temp-control-periodic
+	url = https://github.com/santoslab/sysml-temp-control-periodic.git
