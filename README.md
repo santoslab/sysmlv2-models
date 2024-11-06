@@ -1,5 +1,17 @@
 # HAMR SysML v2 Models
 
+<table>
+<tr>
+<td>Master</td>
+<td> 
+  <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-macOS.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-macOS.yml/badge.svg" alt="macOS"> </a>
+  <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-linux.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-linux.yml/badge.svg" alt="Linux"></a>
+  <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-windows.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-windows.yml/badge.svg" alt="Windows"></a>
+  <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-camkes.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-camkes.yml/badge.svg" alt="CAmkES"></a>
+</td>
+</tr>
+</table>
+
 ## HAMR SysML v2 Quick Syntax References
 
 HAMR's SysML v2 system architecture modeling language subset is
