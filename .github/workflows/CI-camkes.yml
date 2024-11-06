@@ -1,0 +1,75 @@
+name: CAmkES
+
+on: 
+  push:
+  schedule:
+    - cron: "0 2 * * 6" # every sunday at 2am
+  workflow_dispatch:
+    inputs:
+      docker_image:
+        type: string
+        description: Docker image to fetch
+        default: trustworthysystems/camkes
+      verbose:
+        type: boolean
+        description: Enable verbose testing output
+        default: false
+        
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ inputs.docker_image != '' && inputs.docker_image || 'trustworthysystems/camkes' }}
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: sysmlv2-models
+          submodules: recursive
+      - name: Test
+        env:
+          # add verbose flag if workflow is restarted with "enable debug logging" checked or if requested
+          # via workflow dispatch
+          VERBOSE_DEBUG: ${{ ( runner.debug == '1' || inputs.verbose == '1' ) && ',verbose' || '' }}
+        run: |
+          export CAMKES=true
+          
+          # github sets HOME to /github/home but some tools (Sireum's Os.home, Haskell) use
+          # the containers /root instead leading to inconsistent installs. Setting HOME
+          # to be root resolves the issue
+          # https://github.com/actions/runner/issues/1474#issuecomment-965805123
+          export HOME=/root
+
+          mv ./sysmlv2-models $HOME/
+          
+          export aptInstall="apt-get install -f -y --no-install-recommends"
+          export DEBIAN_FRONTEND=noninteractive
+          apt-get update
+          ${aptInstall} p7zip-full unzip
+
+          # Installing emacs installs some package(s) that resolve an issue where
+          # the OSATE gumbo parser fails to initialize when used in the docker container.
+          ${aptInstall} emacs
+
+          DISTRO=ive sh -c "$(curl -fsSL https://github.com/sireum/kekinian/releases/download/dev/install.cmd)"
+          export SIREUM_HOME=$HOME/Applications/Sireum/
+          export PATH=$SIREUM_HOME/bin:$PATH
+
+          sireum
+
+          export CASE_DIR=$HOME/CASE
+          
+          mkdir -p $CASE_DIR/camkes
+          cd $CASE_DIR/camkes
+          repo init -u https://github.com/seL4/camkes-manifest.git
+          repo sync
+          
+          mkdir -p $CASE_DIR/camkes-vm-examples
+          cd $CASE_DIR/camkes-vm-examples
+          repo init -u https://github.com/seL4/camkes-vm-examples-manifest.git
+          repo sync
+
+          cd $HOME/sysmlv2-models
+
+          .ci/test.cmd

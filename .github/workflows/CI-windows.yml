@@ -1,0 +1,55 @@
+name: Windows
+
+on:
+  push:
+  schedule:
+    - cron: "0 2 * * 6" # every sunday at 2am
+  workflow_dispatch:
+  
+jobs:
+
+  ci:
+    runs-on: windows-latest
+    steps:
+      - name: Set git to use LF
+        run: |
+          git config -l
+          echo "---"
+          git config --global core.autocrlf false
+          git config --global core.eol lf
+          echo "---"
+          git config -l
+      - name: Support longpaths
+        run: git config --system core.longpaths true
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Install Cygwin
+        shell: cmd
+        run: |
+          choco config get cacheLocation
+          choco install --no-progress cygwin
+          C:\tools\cygwin\cygwinsetup.exe -qgnNdO -R C:/tools/cygwin -s http://mirrors.kernel.org/sourceware/cygwin/ -P gcc-core,gcc-g++,make,cmake
+      - name: Check LongPathsEnabled
+        run: |
+          (Get-ItemProperty "HKLM:System\CurrentControlSet\Control\FileSystem").LongPathsEnabled
+      - name: Test
+        shell: cmd
+        run: |
+          cmd /V/C "set DISTRO=ive&& curl -JLOs https://github.com/sireum/kekinian/releases/download/dev/install.cmd && install.cmd && del /q/f install.cmd"
+          
+          set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
+          set PATH=%SIREUM_HOME%\bin;%PATH%
+
+          set errorlevel=
+
+          call sireum.bat || goto :error
+           
+          dir
+          call .ci\test.cmd || goto :error
+
+          goto :EOF
+          :error
+          echo Exit Codeg %errorlevel%
+          exit /b %errorlevel%
