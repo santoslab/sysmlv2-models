@@ -1,8 +1,7 @@
-# HAMR SysML v2 Models
+# HAMR SysMLv2 Models
 
 <table>
 <tr>
-<td>Master</td>
 <td> 
   <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-macOS.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-macOS.yml/badge.svg" alt="macOS"> </a>
   <a href="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-linux.yml?query=branch%3Amain"><img src="https://github.com/santoslab/sysmlv2-models/actions/workflows/CI-linux.yml/badge.svg" alt="Linux"></a>
@@ -12,174 +11,63 @@
 </tr>
 </table>
 
-## HAMR SysML v2 Quick Syntax References
+This repository supports the exploration and development of SysMLv2-based
+representations of AADL models (SysMLv2/AADL). It provides library definitions for AADL
+concepts, developed by the Real-Time Embedded Safety-Critical (RTESC) working
+group, along with example SysMLv2 models that demonstrate how these definitions
+can be applied in practice.
 
-HAMR's SysML v2 system architecture modeling language subset is
-the AADL SysML v2 subset being defined by an OMG working group:
+* [RTESC AADL definition in SysMLv2](sysml-aadl-libraries)
+* [Example SysMLv2 models using AADL concepts](models)
 
-https://github.com/santoslab/sysml-aadl-libraries/tree/main
+## Toolchain Installation
 
-Below are some quick syntax references for some of HAMR's SysML v2 AADL subset.
-
-### Package
-
-```
-package <id> {
-  <import>*
-  ⸨ <part>
-  | <alias>
-  ⸩*
-}
-```
-
-
-### Import
-
-```
-<mod> import <id> ⸨ :: <id> )* ⸨ :: * ⸩? ;
-```
-
-`<mod> ::= private`
-
-### Part
-
-```
-part def <id> :> <super> ⸨ <part-members>
-                         | ; ⸩  
-```
-
-```
-<super> ::= ⸨ AADL :: ⸩? ⸨ System 
-                         | Processor
-                         | Process 
-                         | Thread 
-                         | Abstract
-                         | Data 
-                         ⸩ 
-          | <name>
-          
-<name> ::= <id> ⸨ :: <id> ⸩*
-
-<part-members> ::= { <part-member>* }
-```
-
-`<part-member>`:
-
-* A `System` can contain (sub) `System`, `Processor`, `Process`, and
-  `Abstract` `<part-member>`, as well as ports and connections (described below).
-
-* A `Processor` can contain attributes (described below).
-
-* A `Process` can contain `Thread`, ports, and connections
-
-* A `Thread` can contain ports, connections, and GUMBO contracts (described below).
-
-* `Data`'s part member can contain field parts and attributes
-
-   `<field-part> ::= part <id> : <name> ;`
-
-   `<name>` should resolve to a `Data` or an enumeration.
-   Attributes are described below.
-
-* An enumeration (described below) 
-
-### Port
-
-* `DataPort`
+Visit the [Sireum Getting Started](https://sireum.org/getting-started) page. In
+  the section [Both VSCodium-based and Intellij-based
+  IVEs](https://sireum.org/getting-started/#latest-release-bin-ives), run the
+  script that is appropriate for your platform. This will install:
  
-  ```
-  <mode> port <id> : DataPort { :> type : <name> ; }
-  ```
-
-* `EventPort`
-
-  ```
-  <mode> port <id> : EventPort ;
-  ```
-
-* `EventDataPort`
-
-  ```
-  <mode> port <id> : EventDataPort { :> type : <name> ; }
-  ```
-
-```
-<mode> ::= in
-         | out
-```
-
-`<name>` should resolve to a `Data` or an enumeration.
-
-### Connection
-
-```
-connection <id>: ⸨ AADL :: ⸩? PortConnection connect <id> to <name> ⸨ . <id> ⸩* ;
-```
-
-### Enumeration
-
-```
-enum def <id> { ⸨ ⸨ enum ⸩? <id> ; ⸩* }
-```
-
-### Attribute
-
-```
-attribute :>> <name> = <attribute-rhs> ;
-```
-
-```
-<attribute-rhs> ::= <name>
-                  | <NUM> [ <id> ]
-```
-
-`<name>` should resolve to a `Data`, an enumeration, or an
-`abstract` `attribute`.
-
-### Alias
-
-```
-alias <id> for <name> ;
-```
-
-### GUMBO Contract
-
-```
-language "GUMBO" /*{
-
-  ⸨ state ⸨ <id> : <name> ; ⸩* ⸩?
+ - Sireum: A research platform for developing high-assurance systems. It
+   includes HAMR (High-Assurance Modeling and Rapid engineering), which
+   translates SysMLv2 and AADL models into AIR (an intermediate representation)
+   and performs semantic analysis and code generation targeting safety-critical
+   platforms.
+ 
+ - VSCodium:  A fully configured VS Code environment with Sireum/HAMR extensions
+   and SysIDE, which provides editing, validation, and navigation support for
+   SysMLv2/AADL models.
   
-  ⸨ integration ⸨ <assume> 
-                | <guarantee> 
-                ⸩+ ⸩?
-  
-  ⸨ initialize ⸨ <modifies> ⸩? ⸨ <guarantee> ⸩* ⸩? 
-  
-  ⸨ functions ⸨ def <id> ( ⸨ <param> ⸨ , <param> ⸩* ⸩? ) : <name> := <exp> ; ⸩* ⸩?
-  
-  ⸨ compute ⸨ <modifies> ⸩?
-            ⸨ <assume>
-            | <guarantee>
-            ⸩*
-            ⸨ compute_cases ⸨ <compute-case> ⸩+ ⸩? 
-            ⸨ <handle> ⸩* 
-  ⸩?
+ - IVE (Integrated Verification Environment): An IntelliJ-based IDE tailored for
+   working with Slang, Sireum’s modeling and programming language. Slang
+   supports formal contracts, which can be verified using the Logika
+   verification engine to reason about functional correctness through contracts
+   and proofs.
 
-}*/
-```
+After installation, you can open and edit the example models in VSCodium,
+validate them against the RTESC SysMLv2 library definitions, and perform
+downstream processing such as code generation using HAMR.  Each example model in
+this repository includes its own set of instructions to guide you through
+validation, analysis, and tool usage.
 
-```
-<param> ::= <id> : <name>
+## Quick Reference
 
-<modifies> ::= <id> ⸨ , <id> ⸩* ;
+- [SysMLv2/AADL Quick Syntax Guide](syntax-reference.md)
 
-<assume> ::= assume <id> ⸨ <MULTILINE_STRING> ⸩* : <exp> ;
+  A concise summary of how AADL concepts are expressed using SysMLv2 and the RTESC definitions.
 
-<guarantee> ::= guarantee <id> ⸨ <MULTILINE_STRING> ⸩* : <exp> ;
+## Demonstration Videos
 
-<case> ::= case <id> ⸨ <MULTILINE_STRING> ⸩* : <case-assume>+ <case-guarantee>+
+[Isolette model and well-formedness checking in the HAMR (SysIDE) VSCode extension for SysMLv2](
+https://drive.google.com/file/d/1NkNHdvwJ-GHN2C9zpt2HgMpuLdC303T4/view?usp=sharing)
 
-<case-assume> ::= assume ⸨ <MULTILINE_STRING> ⸩* : <exp> ;
+[Isolette model-level GUMBO integration constraint checking with error reporting in VSCode](
+https://drive.google.com/file/d/17IjDBFzjx1WtYSNRimzbVOj_nnMf8qN8/view?usp=sharing)
 
-<case-guarantee> ::= guarantee ⸨ <MULTILINE_STRING> ⸩* : <exp> ;
-```
+[Isolette Manage Heat Source (MHS) Slang component implementation automated property-based testing and Logika verification](
+https://drive.google.com/file/d/1LAWtQpiTjdac1STDqzgvIMmJrB1bTyDd/view?usp=sharing)
+
+[Isolette HAMR code generation for JVM and seL4 microkit](
+https://drive.google.com/file/d/1a5GJqx94ySi-l-MCX1vqjWc76njNArkO/view?usp=sharing)
+
+[Isolette HAMR Rust code development, verification, testing, and deployment on seL4](
+https://drive.google.com/file/d/19WgWayynoNIgUTvpN0LOGIvRYhbx-aoU/view?usp=sharing)
