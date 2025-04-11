@@ -1,4 +1,4 @@
-# HAMR SysMLv2 Models
+# HAMR SysMLv2/AADL Models
 
 <table>
 <tr>
