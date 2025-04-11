@@ -33,7 +33,7 @@ Visit the [Sireum Getting Started](https://sireum.org/getting-started) page. In
    and performs semantic analysis and code generation targeting safety-critical
    platforms.
  
- - VSCodium:  A fully configured VS Code environment with Sireum/HAMR extensions
+ - CodeIVE:  A fully configured VS Code environment with Sireum/HAMR extensions
    and SysIDE, which provides editing, validation, and navigation support for
    SysMLv2/AADL models.
   
