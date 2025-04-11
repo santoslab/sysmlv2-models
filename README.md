@@ -43,7 +43,7 @@ Visit the [Sireum Getting Started](https://sireum.org/getting-started) page. In
    verification engine to reason about functional correctness through contracts
    and proofs.
 
-After installation, you can open and edit the example models in VSCodium,
+After installation, you can open and edit the example models in CodeIVE,
 validate them against the RTESC SysMLv2 library definitions, and perform
 downstream processing such as code generation using HAMR.  Each example model in
 this repository includes its own set of instructions to guide you through
