@@ -17,7 +17,7 @@ concepts, developed by the Real-Time Embedded Safety-Critical (RTESC) working
 group, along with example SysMLv2 models that demonstrate how these definitions
 can be applied in practice.
 
-* [RTESC AADL definition in SysMLv2](sysml-aadl-libraries)
+* [RTESC AADL definition in SysMLv2](https://github.com/santoslab/sysml-aadl-libraries/tree/main/aadl.library)
 * [Example SysMLv2 models using AADL concepts](models)
 
 ## Toolchain Installation
