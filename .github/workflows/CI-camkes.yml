@@ -51,9 +51,9 @@ jobs:
           # Installing emacs installs some package(s) that resolve an issue where
           # the OSATE gumbo parser fails to initialize when used in the docker container.
           ${aptInstall} emacs
-
-          DISTRO=ive sh -c "$(curl -fsSL https://github.com/sireum/kekinian/releases/download/dev/install.cmd)"
-          export SIREUM_HOME=$HOME/Applications/Sireum/
+          
+          (DIR=Sireum && export SIREUM_V=master && rm -fR $DIR && mkdir -p $DIR/bin && cd $DIR/bin && curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/$SIREUM_V/bin/init.sh && bash init.sh)
+          export SIREUM_HOME=$(pwd)/Sireum/
           export PATH=$SIREUM_HOME/bin:$PATH
 
           sireum
