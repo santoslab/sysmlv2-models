@@ -25,7 +25,10 @@ package <id> {
 <mod> import <id> ⸨ :: <id> )* ⸨ :: * ⸩? ;
 ```
 
-`<mod> ::= private`
+```
+<mod> ::= private
+        | public
+```
 
 ### Part
 
@@ -74,7 +77,7 @@ part def <id> :> <super> ⸨ <part-members>
 * `DataPort`
  
   ```
-  <mode> port <id> : DataPort { :> type : <name> ; }
+  <mode> port <id> : DataPort { :>> type : <name> ; }
   ```
 
 * `EventPort`
@@ -86,7 +89,7 @@ part def <id> :> <super> ⸨ <part-members>
 * `EventDataPort`
 
   ```
-  <mode> port <id> : EventDataPort { :> type : <name> ; }
+  <mode> port <id> : EventDataPort { :>> type : <name> ; }
   ```
 
 ```
